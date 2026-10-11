@@ -1,0 +1,2012 @@
+▲ Next.js 16.4.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://100.74.84.2:3000
+- Environments: .env
+✓ Ready in 631ms
+✓ Running next.config.ts took 115ms
+
+ GET /nursing 200 in 4.0s (next.js: 1583ms, proxy.ts: 306ms, generate-params: 979ms, application-code: 1159ms)
+ GET / 307 in 1152ms (next.js: 153ms, proxy.ts: 5ms, generate-params: 883ms, application-code: 110ms)
+ GET /login 200 in 976ms (next.js: 243ms, proxy.ts: 4ms, generate-params: 535ms, application-code: 194ms)
+ GET / 307 in 1014ms (next.js: 808ms, proxy.ts: 17ms, generate-params: 22ms, application-code: 167ms)
+ GET /login 200 in 693ms (next.js: 334ms, proxy.ts: 12ms, generate-params: 21ms, application-code: 327ms)
+ GET / 200 in 1050ms (next.js: 148ms, proxy.ts: 29ms, generate-params: 21ms, application-code: 853ms)
+ GET /en 307 in 194ms (next.js: 16ms, proxy.ts: 8ms, generate-params: 11ms, application-code: 160ms)
+ GET /login 200 in 240ms (next.js: 64ms, proxy.ts: 8ms, generate-params: 10ms, application-code: 158ms)
+ GET /nursing 307 in 457ms (next.js: 202ms, proxy.ts: 8ms, generate-params: 12ms, application-code: 235ms)
+ GET /patients 307 in 1992ms (next.js: 378ms, proxy.ts: 9ms, generate-params: 1440ms, application-code: 165ms)
+ GET /queue 307 in 1912ms (next.js: 350ms, proxy.ts: 6ms, generate-params: 1416ms, application-code: 140ms)
+ GET /patients 200 in 630ms (next.js: 49ms, proxy.ts: 9ms, generate-params: 12ms, application-code: 561ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 1093ms (next.js: 78ms, proxy.ts: 29ms, application-code: 987ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 3.8s (next.js: 2.5s, proxy.ts: 8ms, application-code: 1244ms)
+ GET /patients/new 200 in 2.8s (next.js: 990ms, proxy.ts: 12ms, generate-params: 1545ms, application-code: 282ms)
+ GET /patients 200 in 1144ms (next.js: 114ms, proxy.ts: 9ms, generate-params: 12ms, application-code: 1008ms)
+ GET /patients/new 200 in 360ms (next.js: 121ms, proxy.ts: 11ms, generate-params: 14ms, application-code: 214ms)
+ GET /patients/new 200 in 857ms (next.js: 313ms, proxy.ts: 24ms, generate-params: 12ms, application-code: 508ms)
+ POST /patients/new 200 in 426ms (next.js: 40ms, proxy.ts: 28ms, generate-params: 28ms, application-code: 330ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 132ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 433ms (next.js: 15ms, proxy.ts: 8ms, generate-params: 10ms, application-code: 399ms)
+  └─ ƒ createPatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","gender":"MALE","...":"6 items not stringified"}, undefined) in 78ms src/app/[locale]/(app)/patients/actions.ts
+ POST /patients/new 200 in 112ms (next.js: 16ms, proxy.ts: 10ms, generate-params: 0.1ms, application-code: 86ms)
+  └─ ƒ listVisitOptions() in 59ms src/app/[locale]/(app)/visits/actions.ts
+ POST /patients/new 200 in 649ms (next.js: 17ms, proxy.ts: 8ms, generate-params: 10ms, application-code: 613ms)
+  └─ ƒ openVisit("cmv4cf4qc0003jsvhmss22p67", {"chiefComplaint":"الم في الظهر","doctorId":"0hupcOJRYqa8i6MawTJppZ3jmGATnouu","priority":"NORMAL","...":"4 items not stringified"}) in 326ms src/app/[locale]/(app)/visits/actions.ts
+ POST /patients/new 200 in 932ms (next.js: 32ms, proxy.ts: 38ms, generate-params: 0.1ms, application-code: 862ms)
+  └─ ƒ createPatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","gender":"MALE","...":"6 items not stringified"}, undefined) in 82ms src/app/[locale]/(app)/patients/actions.ts
+ GET /patients/cmv4cgeja000bjsvhronhvxls 200 in 2.2s (next.js: 180ms, proxy.ts: 11ms, application-code: 2.0s)
+ GET /patients/cmv4cf4qc0003jsvhmss22p67 200 in 2.6s (next.js: 438ms, proxy.ts: 17ms, application-code: 2.1s)
+ GET /patients/cmv4cgeja000bjsvhronhvxls 200 in 2.5s (next.js: 226ms, proxy.ts: 35ms, application-code: 2.3s)
+ GET /patients/cmv4cgeja000bjsvhronhvxls 200 in 2.1s (next.js: 138ms, proxy.ts: 46ms, application-code: 1900ms)
+ GET /patients/cmv4cgeja000bjsvhronhvxls 200 in 1857ms (next.js: 183ms, proxy.ts: 154ms, application-code: 1519ms)
+ GET /encounters/cmv4cge4j0006jsvhsv54yzgt 200 in 3.8s (next.js: 2.5s, proxy.ts: 23ms, application-code: 1279ms)
+ GET /patients/cmv4cgeja000bjsvhronhvxls 200 in 1198ms (next.js: 224ms, proxy.ts: 185ms, application-code: 789ms)
+ POST /patients/cmv4cgeja000bjsvhronhvxls 200 in 268ms (next.js: 182ms, proxy.ts: 7ms, application-code: 79ms)
+  └─ ƒ listVisitOptions() in 50ms src/app/[locale]/(app)/visits/actions.ts
+ GET / 200 in 651ms (next.js: 118ms, proxy.ts: 21ms, generate-params: 11ms, application-code: 500ms)
+ GET /patients 200 in 409ms (next.js: 55ms, proxy.ts: 9ms, generate-params: 15ms, application-code: 331ms)
+ GET /patients/cmv4cf4qc0003jsvhmss22p67 200 in 720ms (next.js: 24ms, proxy.ts: 6ms, application-code: 690ms)
+ GET /patients/cmv4cgeja000bjsvhronhvxls 200 in 936ms (next.js: 29ms, proxy.ts: 5ms, application-code: 902ms)
+ POST /patients/cmv4cgeja000bjsvhronhvxls 200 in 567ms (next.js: 16ms, proxy.ts: 8ms, application-code: 543ms)
+  └─ ƒ deletePatient("cmv4cgeja000bjsvhronhvxls", undefined) in 198ms src/app/[locale]/(app)/patients/actions.ts
+ GET /patients 200 in 461ms (next.js: 38ms, proxy.ts: 14ms, generate-params: 11ms, application-code: 398ms)
+ GET /patients 200 in 433ms (next.js: 103ms, proxy.ts: 21ms, generate-params: 0.0ms, application-code: 309ms)
+ GET /patients/cmv4cf4qc0003jsvhmss22p67 200 in 468ms (next.js: 15ms, proxy.ts: 5ms, application-code: 448ms)
+ POST /patients/cmv4cf4qc0003jsvhmss22p67 200 in 376ms (next.js: 14ms, proxy.ts: 7ms, application-code: 355ms)
+  └─ ƒ deletePatient("cmv4cf4qc0003jsvhmss22p67", undefined) in 114ms src/app/[locale]/(app)/patients/actions.ts
+ GET /patients 200 in 383ms (next.js: 33ms, proxy.ts: 24ms, generate-params: 0.1ms, application-code: 326ms)
+ GET /patients 200 in 490ms (next.js: 144ms, proxy.ts: 32ms, generate-params: 0.0ms, application-code: 313ms)
+ GET /reception 200 in 3.4s (next.js: 754ms, proxy.ts: 10ms, generate-params: 2.3s, application-code: 329ms)
+ GET /appointments/new?date=2026-10-11 200 in 3.0s (next.js: 306ms, proxy.ts: 6ms, generate-params: 2.5s, application-code: 215ms)
+ GET /patients 200 in 490ms (next.js: 148ms, proxy.ts: 7ms, generate-params: 14ms, application-code: 321ms)
+ GET /patients/new 200 in 419ms (next.js: 79ms, proxy.ts: 12ms, generate-params: 10ms, application-code: 317ms)
+ GET /patients 200 in 539ms (next.js: 28ms, proxy.ts: 10ms, generate-params: 16ms, application-code: 485ms)
+ GET /encounters 200 in 1629ms (next.js: 205ms, proxy.ts: 5ms, generate-params: 1165ms, application-code: 254ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 1375ms (next.js: 71ms, proxy.ts: 5ms, application-code: 1299ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 655ms (next.js: 16ms, proxy.ts: 8ms, application-code: 632ms)
+ POST /encounters/cmv3x91ah00098gvhiingov3v 200 in 1107ms (next.js: 122ms, proxy.ts: 4ms, application-code: 981ms)
+  └─ ƒ routeVisit("cmv3x91ap000a8gvh81oeeimy", {"destination":"TRIAGE"}) in 123ms src/app/[locale]/(app)/visits/actions.ts
+ POST /encounters/cmv3x91ah00098gvhiingov3v 200 in 575ms (next.js: 16ms, proxy.ts: 5ms, application-code: 555ms)
+  └─ ƒ routeVisit("cmv3x91ap000a8gvh81oeeimy", {"destination":"DOCTOR"}) in 55ms src/app/[locale]/(app)/visits/actions.ts
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 500ms (next.js: 35ms, proxy.ts: 12ms, application-code: 453ms)
+✓ Compiled in 309ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 697ms (next.js: 114ms, proxy.ts: 5ms, application-code: 578ms)
+[browser] Select is changing from uncontrolled to controlled. Components should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled value for the lifetime of the component.
+ POST /encounters/cmv3x91ah00098gvhiingov3v 200 in 740ms (next.js: 43ms, proxy.ts: 4ms, application-code: 693ms)
+  └─ ƒ saveEncounterHistory("cmv3x91ah00098gvhiingov3v", {"aggravatingFactors":"اذا سجدت","alleviatingFactors":"اذا كان المريض مستقيم","familyHistory":"","...":"7 items not stringified"}) in 79ms src/app/[locale]/(app)/encounters/actions.ts
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 588ms (next.js: 25ms, proxy.ts: 7ms, application-code: 555ms)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+ POST /encounters/cmv3x91ah00098gvhiingov3v 200 in 704ms (next.js: 16ms, proxy.ts: 6ms, application-code: 682ms)
+  └─ ƒ saveEncounterExamination("cmv3x91ah00098gvhiingov3v", {"abdominal":"","additional":"","cardiac":"","...":"8 items not stringified"}) in 105ms src/app/[locale]/(app)/encounters/actions.ts
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 550ms (next.js: 24ms, proxy.ts: 10ms, application-code: 516ms)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+[browser] Error: MISSING_MESSAGE: Could not resolve `encounters.section_examNotes` in messages for locale `ar`.
+    at <unknown> (src/components/encounters/exam-form.tsx:53:21)
+    at Array.map (<anonymous>)
+    at ExamForm (src/components/encounters/exam-form.tsx:48:19)
+    at EncounterChart (src/components/encounters/encounter-chart.tsx:774:11)
+    at EncounterDetailPage (src\app\[locale]\(app)\encounters\[id]\page.tsx:212:7)
+  51 |             className={s === "additional" || s === "examNotes" ? "flex flex-col gap-2 lg:col-span-2" : "flex flex-col gap-2"}
+  52 |           >
+> 53 |             <Label>{t(`section_${s}`)}</Label>
+     |                     ^
+  54 |             <Textarea
+  55 |               rows={s === "examNotes" || s === "additional" ? 2 : 3}
+  56 |               value={form[s]} (src/components/encounters/exam-form.tsx:53:21)
+ POST /encounters/cmv3x91ah00098gvhiingov3v 200 in 923ms (next.js: 19ms, proxy.ts: 4ms, application-code: 900ms)
+  └─ ƒ closeEncounter("cmv3x91ah00098gvhiingov3v") in 123ms src/app/[locale]/(app)/encounters/actions.ts
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 658ms (next.js: 16ms, proxy.ts: 7ms, application-code: 636ms)
+ GET /patients 200 in 256ms (next.js: 24ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 221ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 537ms (next.js: 112ms, proxy.ts: 6ms, application-code: 419ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=diagnoses 200 in 289ms (next.js: 22ms, proxy.ts: 5ms, application-code: 262ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=medications 200 in 273ms (next.js: 15ms, proxy.ts: 4ms, application-code: 254ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=imaging 200 in 254ms (next.js: 9ms, proxy.ts: 4ms, application-code: 241ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=notes 200 in 239ms (next.js: 15ms, proxy.ts: 4ms, application-code: 220ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=documents 200 in 192ms (next.js: 9ms, proxy.ts: 4ms, application-code: 179ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=followup 200 in 222ms (next.js: 14ms, proxy.ts: 4ms, application-code: 205ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=audit 200 in 202ms (next.js: 9ms, proxy.ts: 4ms, application-code: 190ms)
+ GET / 200 in 399ms (next.js: 26ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 360ms)
+ GET /patients 200 in 240ms (next.js: 30ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 199ms)
+ GET /patients/new 200 in 154ms (next.js: 45ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 99ms)
+ GET / 200 in 475ms (next.js: 12ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 452ms)
+ GET / 200 in 1427ms (next.js: 13ms, proxy.ts: 9ms, generate-params: 7ms, application-code: 1397ms)
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+ GET / 500 in 3.3s (next.js: 2.5s, proxy.ts: 10ms, application-code: 749ms)
+[browser] Uncaught Error: ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed
+
+
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+ GET / 500 in 67ms (next.js: 47ms, proxy.ts: 6ms, application-code: 14ms)
+[browser] Uncaught Error: ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed
+
+
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+ GET / 500 in 37ms (next.js: 22ms, proxy.ts: 4ms, application-code: 11ms)
+[browser] Uncaught Error: ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed
+
+
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+ GET / 500 in 62ms (next.js: 41ms, proxy.ts: 5ms, application-code: 16ms)
+[browser] Uncaught Error: ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed
+
+
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+ GET / 500 in 42ms (next.js: 24ms, proxy.ts: 5ms, application-code: 14ms)
+[browser] Uncaught Error: ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed
+
+
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:10
+Error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  108 |             )}
+  109 |           )}
+> 110 |         />
+      |          ^
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:12
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  107 |               </Button>
+  108 |             )}
+> 109 |           )}
+      |            ^
+  110 |         />
+  111 |
+  112 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:111:9
+Error: Expected '</', got '}'
+  109 |             </>
+  110 |           )
+> 111 |         }
+      |         ^
+  112 |       />
+  113 |
+  114 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:111:9
+Error: Expected '</', got '}'
+  109 |             </>
+  110 |           )
+> 111 |         }
+      |         ^
+  112 |       />
+  113 |
+  114 |       <div className="flex flex-col gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:11
+Error: Expected '</', got '}'
+  108 |               </Button>
+  109 |             </>
+> 110 |           }
+      |           ^
+  111 |         />
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:110:11
+Error: Expected '</', got '}'
+  108 |               </Button>
+  109 |             </>
+> 110 |           }
+      |           ^
+  111 |         />
+  112 |       <div className="flex flex-col gap-3">
+  113 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:11
+Error: Expected '</', got '}'
+  107 |               </Button>
+  108 |             </>
+> 109 |           }
+      |           ^
+  110 |         />
+  111 |       <div className="flex flex-col gap-3">
+  112 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:109:11
+Error: Expected '</', got '}'
+  107 |               </Button>
+  108 |             </>
+> 109 |           }
+      |           ^
+  110 |         />
+  111 |       <div className="flex flex-col gap-3">
+  112 |         <div className="flex flex-wrap items-start justify-between gap-3">
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+ GET / 500 in 46ms (next.js: 25ms, proxy.ts: 7ms, application-code: 15ms)
+[browser] Uncaught Error: ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed
+
+
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:177:7
+Error: Expected '</', got '}'
+  175 |           }}
+  176 |         />
+> 177 |       }
+      |       ^
+  178 |       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  179 |         <div className="flex flex-col gap-2">
+  180 |           <Label htmlFor="firstNameAr">{t("firstNameAr")} *</Label>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:177:7
+Error: Expected '</', got '}'
+  175 |           }}
+  176 |         />
+> 177 |       }
+      |       ^
+  178 |       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  179 |         <div className="flex flex-col gap-2">
+  180 |           <Label htmlFor="firstNameAr">{t("firstNameAr")} *</Label>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:178:12
+Error: Expected '</', got 'ident'
+  176 |         />
+  177 |       )
+> 178 |       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      |            ^^^^^^^^^
+  179 |         <div className="flex flex-col gap-2">
+  180 |           <Label htmlFor="firstNameAr">{t("firstNameAr")} *</Label>
+  181 |           <Input id="firstNameAr" {...register("firstNameAr")} />
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:178:12
+Error: Expected '</', got 'ident'
+  176 |         />
+  177 |       )
+> 178 |       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      |            ^^^^^^^^^
+  179 |         <div className="flex flex-col gap-2">
+  180 |           <Label htmlFor="firstNameAr">{t("firstNameAr")} *</Label>
+  181 |           <Input id="firstNameAr" {...register("firstNameAr")} />
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:230:17
+Error: Expected '</', got '{'
+  228 |               <SelectContent>
+  229 |                 <SelectItem value="NONE">{tc("none")}</SelectItem>
+> 230 |                 {CITIES.map((c) => (
+      |                 ^
+  231 |                   <SelectItem key={c} value={c}>
+  232 |                     {t(`city_${c}`)}
+  233 |                   </SelectItem>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:230:17
+Error: Expected '</', got '{'
+  228 |               <SelectContent>
+  229 |                 <SelectItem value="NONE">{tc("none")}</SelectItem>
+> 230 |                 {CITIES.map((c) => (
+      |                 ^
+  231 |                   <SelectItem key={c} value={c}>
+  232 |                     {t(`city_${c}`)}
+  233 |                   </SelectItem>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:231:19
+Error: Expected '</', got '{'
+  229 |                 <SelectContent>
+  230 |                   <SelectItem value="NONE">{tc("none")}</SelectItem>
+> 231 |                   {CITIES.map((c) => (
+      |                   ^
+  232 |                     <SelectItem key={c} value={c}>
+  233 |                       {t(`city_${c}`)}
+  234 |                     </SelectItem>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:231:19
+Error: Expected '</', got '{'
+  229 |                 <SelectContent>
+  230 |                   <SelectItem value="NONE">{tc("none")}</SelectItem>
+> 231 |                   {CITIES.map((c) => (
+      |                   ^
+  232 |                     <SelectItem key={c} value={c}>
+  233 |                       {t(`city_${c}`)}
+  234 |                     </SelectItem>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx 
+⨯ ./src/components/patients/patient-form.tsx:20:1
+Error: Module not found: Can't resolve '@/lib/constants'
+  [90m18 |[0m [36mimport[0m { [33mDuplicateWarning[0m } [36mfrom[0m [32m"@/components/patients/duplicate-warning"[0m;
+  [90m19 |[0m [36mimport[0m { [33mSelect[0m, [33mSelectContent[0m, [33mSelectItem[0m, [33mSelectTrigger[0m, [33mSelectValue[0m } [36mfrom[0m [32m"@/component...[0m
+[31m[1m>[0m [90m20 |[0m [36mimport[0m { [33mCITIES[0m } [36mfrom[0m [32m"@/lib/constants"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m21 |[0m
+  [90m22 |[0m [36mexport[0m [36mfunction[0m [33mPatientForm[0m({
+  [90m23 |[0m   patientId,
+
+Import map: aliased to relative './src/lib/constants' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/patients/patient-form.tsx:20:1
+Error: Module not found: Can't resolve '@/lib/constants'
+  [90m18 |[0m [36mimport[0m { [33mDuplicateWarning[0m } [36mfrom[0m [32m"@/components/patients/duplicate-warning"[0m;
+  [90m19 |[0m [36mimport[0m { [33mSelect[0m, [33mSelectContent[0m, [33mSelectItem[0m, [33mSelectTrigger[0m, [33mSelectValue[0m } [36mfrom[0m [32m"@/component...[0m
+[31m[1m>[0m [90m20 |[0m [36mimport[0m { [33mCITIES[0m } [36mfrom[0m [32m"@/lib/constants"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m21 |[0m
+  [90m22 |[0m [36mexport[0m [36mfunction[0m [33mPatientForm[0m({
+  [90m23 |[0m   patientId,
+
+Import map: aliased to relative './src/lib/constants' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/patients/patient-form.tsx:20:1
+Error: Module not found: Can't resolve '@/lib/constants'
+  [90m18 |[0m [36mimport[0m { [33mDuplicateWarning[0m } [36mfrom[0m [32m"@/components/patients/duplicate-warning"[0m;
+  [90m19 |[0m [36mimport[0m { [33mSelect[0m, [33mSelectContent[0m, [33mSelectItem[0m, [33mSelectTrigger[0m, [33mSelectValue[0m } [36mfrom[0m [32m"@/component...[0m
+[31m[1m>[0m [90m20 |[0m [36mimport[0m { [33mCITIES[0m } [36mfrom[0m [32m"@/lib/constants"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m21 |[0m
+  [90m22 |[0m [36mexport[0m [36mfunction[0m [33mPatientForm[0m({
+  [90m23 |[0m   patientId,
+
+Import map: aliased to relative './src/lib/constants' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/patients/patient-form.tsx:20:1
+Error: Module not found: Can't resolve '@/lib/constants'
+  [90m18 |[0m [36mimport[0m { [33mDuplicateWarning[0m } [36mfrom[0m [32m"@/components/patients/duplicate-warning"[0m;
+  [90m19 |[0m [36mimport[0m { [33mSelect[0m, [33mSelectContent[0m, [33mSelectItem[0m, [33mSelectTrigger[0m, [33mSelectValue[0m } [36mfrom[0m [32m"@/component...[0m
+[31m[1m>[0m [90m20 |[0m [36mimport[0m { [33mCITIES[0m } [36mfrom[0m [32m"@/lib/constants"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m21 |[0m
+  [90m22 |[0m [36mexport[0m [36mfunction[0m [33mPatientForm[0m({
+  [90m23 |[0m   patientId,
+
+Import map: aliased to relative './src/lib/constants' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pg/lib/connection-parameters.js:3:13
+Error: Module not found: Can't resolve 'dns'
+  [90m1 |[0m [32m'use strict'[0m
+  [90m2 |[0m
+[31m[1m>[0m [90m3 |[0m [36mconst[0m dns = require([32m'dns'[0m)
+  [90m  |[0m             [31m[1m^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m defaults = require([32m'./defaults'[0m)
+  [90m6 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/connection-parameters.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pg-connection-string/index.js:88:70
+Error: Module not found: Can't resolve 'fs'
+  [90m86 |[0m
+  [90m87 |[0m   [90m// Only try to load fs if we expect to read from the disk[0m
+[31m[1m>[0m [90m88 |[0m   [36mconst[0m fs = config.sslcert || config.sslkey || config.sslrootcert ? require([32m'fs'[0m) : [36mnull[0m
+  [90m   |[0m                                                                      [31m[1m^^^^^^^^^^^^^[0m
+  [90m89 |[0m
+  [90m90 |[0m   [36mif[0m (config.sslcert) {
+  [90m91 |[0m     config.ssl.cert = fs.readFileSync(config.sslcert).toString()
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg-connection-string/index.js [Client Component Browser]
+    ./node_modules/pg/lib/connection-parameters.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pgpass/lib/index.js:4:10
+Error: Module not found: Can't resolve 'fs'
+  [90m2 |[0m
+  [90m3 |[0m [36mvar[0m path = require([32m'path'[0m)
+[31m[1m>[0m [90m4 |[0m   , fs = require([32m'fs'[0m)
+  [90m  |[0m          [31m[1m^^^^^^^^^^^^^[0m
+  [90m5 |[0m   , helper = require([32m'./helper.js'[0m)
+  [90m6 |[0m ;
+  [90m7 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pgpass/lib/index.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pg/lib/connection.js:94:19
+Error: Module not found: Can't resolve 'net'
+  [90m92 |[0m       }
+  [90m93 |[0m
+[31m[1m>[0m [90m94 |[0m       [36mconst[0m net = require([32m'net'[0m)
+  [90m   |[0m                   [31m[1m^^^^^^^^^^^^^^[0m
+  [90m95 |[0m       [36mif[0m (net.isIP && net.isIP(host) === [35m0[0m) {
+  [90m96 |[0m         options.servername = host
+  [90m97 |[0m       }
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pg/lib/stream.js:22:17
+Error: Module not found: Can't resolve 'net'
+  [90m20 |[0m [36mfunction[0m getNodejsStreamFuncs() {
+  [90m21 |[0m   [36mfunction[0m getStream(ssl) {
+[31m[1m>[0m [90m22 |[0m     [36mconst[0m net = require([32m'net'[0m)
+  [90m   |[0m                 [31m[1m^^^^^^^^^^^^^^[0m
+  [90m23 |[0m     [36mreturn[0m [36mnew[0m net.[33mSocket[0m()
+  [90m24 |[0m   }
+  [90m25 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/stream.js [Client Component Browser]
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pg/lib/stream.js:27:17
+Error: Module not found: Can't resolve 'tls'
+  [90m25 |[0m
+  [90m26 |[0m   [36mfunction[0m getSecureStream(options) {
+[31m[1m>[0m [90m27 |[0m     [36mconst[0m tls = require([32m'tls'[0m)
+  [90m   |[0m                 [31m[1m^^^^^^^^^^^^^^[0m
+  [90m28 |[0m     [36mreturn[0m tls.connect(options)
+  [90m29 |[0m   }
+  [90m30 |[0m   [36mreturn[0m {
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/stream.js [Client Component Browser]
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:20:1
+Error: Module not found: Can't resolve '@/lib/constants'
+  18 | import { DuplicateWarning } from "@/components/patients/duplicate-warning";
+  19 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/component...
+> 20 | import { CITIES } from "@/lib/constants";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  21 |
+  22 | export function PatientForm({
+  23 |   patientId,
+
+Import map: aliased to relative './src/lib/constants' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg/lib/connection-parameters.js:3:13
+Error: Module not found: Can't resolve 'dns'
+  1 | 'use strict'
+  2 |
+> 3 | const dns = require('dns')
+    |             ^^^^^^^^^^^^^^
+  4 |
+  5 | const defaults = require('./defaults')
+  6 |
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/connection-parameters.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg-connection-string/index.js:88:70
+Error: Module not found: Can't resolve 'fs'
+  86 |
+  87 |   // Only try to load fs if we expect to read from the disk
+> 88 |   const fs = config.sslcert || config.sslkey || config.sslrootcert ? require('fs') : null
+     |                                                                      ^^^^^^^^^^^^^
+  89 |
+  90 |   if (config.sslcert) {
+  91 |     config.ssl.cert = fs.readFileSync(config.sslcert).toString()
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg-connection-string/index.js [Client Component Browser]
+    ./node_modules/pg/lib/connection-parameters.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pgpass/lib/index.js:4:10
+Error: Module not found: Can't resolve 'fs'
+  2 |
+  3 | var path = require('path')
+> 4 |   , fs = require('fs')
+    |          ^^^^^^^^^^^^^
+  5 |   , helper = require('./helper.js')
+  6 | ;
+  7 |
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pgpass/lib/index.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg/lib/connection.js:94:19
+Error: Module not found: Can't resolve 'net'
+  92 |       }
+  93 |
+> 94 |       const net = require('net')
+     |                   ^^^^^^^^^^^^^^
+  95 |       if (net.isIP && net.isIP(host) === 0) {
+  96 |         options.servername = host
+  97 |       }
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg/lib/stream.js:22:17
+Error: Module not found: Can't resolve 'net'
+  20 | function getNodejsStreamFuncs() {
+  21 |   function getStream(ssl) {
+> 22 |     const net = require('net')
+     |                 ^^^^^^^^^^^^^^
+  23 |     return new net.Socket()
+  24 |   }
+  25 |
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/stream.js [Client Component Browser]
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg/lib/stream.js:27:17
+Error: Module not found: Can't resolve 'tls'
+  25 |
+  26 |   function getSecureStream(options) {
+> 27 |     const tls = require('tls')
+     |                 ^^^^^^^^^^^^^^
+  28 |     return tls.connect(options)
+  29 |   }
+  30 |   return {
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/stream.js [Client Component Browser]
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/[locale]/(app)/patients/page.tsx:112:10
+Error: Unterminated regexp literal
+  110 |             </span>
+  111 |           </div>
+> 112 |         </div>
+      |          ^^^^^
+  113 |
+  114 |         <RecentlyViewed
+  115 |           items={recent.map((r) => ({ viewedAt: r.viewedAt.toISOString(), ...r.patient }))
+
+Parsing ecmascript source code failed 
+[browser] ./src/components/patients/patient-form.tsx:20:1
+Error: Module not found: Can't resolve '@/lib/constants'
+  18 | import { DuplicateWarning } from "@/components/patients/duplicate-warning";
+  19 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/component...
+> 20 | import { CITIES } from "@/lib/constants";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  21 |
+  22 | export function PatientForm({
+  23 |   patientId,
+
+Import map: aliased to relative './src/lib/constants' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/patients/patient-form.tsx
+    ./src/app/[locale]/(app)/patients/new/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg/lib/connection-parameters.js:3:13
+Error: Module not found: Can't resolve 'dns'
+  1 | 'use strict'
+  2 |
+> 3 | const dns = require('dns')
+    |             ^^^^^^^^^^^^^^
+  4 |
+  5 | const defaults = require('./defaults')
+  6 |
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/connection-parameters.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg-connection-string/index.js:88:70
+Error: Module not found: Can't resolve 'fs'
+  86 |
+  87 |   // Only try to load fs if we expect to read from the disk
+> 88 |   const fs = config.sslcert || config.sslkey || config.sslrootcert ? require('fs') : null
+     |                                                                      ^^^^^^^^^^^^^
+  89 |
+  90 |   if (config.sslcert) {
+  91 |     config.ssl.cert = fs.readFileSync(config.sslcert).toString()
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg-connection-string/index.js [Client Component Browser]
+    ./node_modules/pg/lib/connection-parameters.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pgpass/lib/index.js:4:10
+Error: Module not found: Can't resolve 'fs'
+  2 |
+  3 | var path = require('path')
+> 4 |   , fs = require('fs')
+    |          ^^^^^^^^^^^^^
+  5 |   , helper = require('./helper.js')
+  6 | ;
+  7 |
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pgpass/lib/index.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg/lib/connection.js:94:19
+Error: Module not found: Can't resolve 'net'
+  92 |       }
+  93 |
+> 94 |       const net = require('net')
+     |                   ^^^^^^^^^^^^^^
+  95 |       if (net.isIP && net.isIP(host) === 0) {
+  96 |         options.servername = host
+  97 |       }
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg/lib/stream.js:22:17
+Error: Module not found: Can't resolve 'net'
+  20 | function getNodejsStreamFuncs() {
+  21 |   function getStream(ssl) {
+> 22 |     const net = require('net')
+     |                 ^^^^^^^^^^^^^^
+  23 |     return new net.Socket()
+  24 |   }
+  25 |
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/stream.js [Client Component Browser]
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./node_modules/pg/lib/stream.js:27:17
+Error: Module not found: Can't resolve 'tls'
+  25 |
+  26 |   function getSecureStream(options) {
+> 27 |     const tls = require('tls')
+     |                 ^^^^^^^^^^^^^^
+  28 |     return tls.connect(options)
+  29 |   }
+  30 |   return {
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/stream.js [Client Component Browser]
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found 
+⨯ ./node_modules/pg/lib/connection-parameters.js:3:13
+Error: Module not found: Can't resolve 'dns'
+  [90m1 |[0m [32m'use strict'[0m
+  [90m2 |[0m
+[31m[1m>[0m [90m3 |[0m [36mconst[0m dns = require([32m'dns'[0m)
+  [90m  |[0m             [31m[1m^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m defaults = require([32m'./defaults'[0m)
+  [90m6 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/connection-parameters.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pg-connection-string/index.js:88:70
+Error: Module not found: Can't resolve 'fs'
+  [90m86 |[0m
+  [90m87 |[0m   [90m// Only try to load fs if we expect to read from the disk[0m
+[31m[1m>[0m [90m88 |[0m   [36mconst[0m fs = config.sslcert || config.sslkey || config.sslrootcert ? require([32m'fs'[0m) : [36mnull[0m
+  [90m   |[0m                                                                      [31m[1m^^^^^^^^^^^^^[0m
+  [90m89 |[0m
+  [90m90 |[0m   [36mif[0m (config.sslcert) {
+  [90m91 |[0m     config.ssl.cert = fs.readFileSync(config.sslcert).toString()
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg-connection-string/index.js [Client Component Browser]
+    ./node_modules/pg/lib/connection-parameters.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pgpass/lib/index.js:4:10
+Error: Module not found: Can't resolve 'fs'
+  [90m2 |[0m
+  [90m3 |[0m [36mvar[0m path = require([32m'path'[0m)
+[31m[1m>[0m [90m4 |[0m   , fs = require([32m'fs'[0m)
+  [90m  |[0m          [31m[1m^^^^^^^^^^^^^[0m
+  [90m5 |[0m   , helper = require([32m'./helper.js'[0m)
+  [90m6 |[0m ;
+  [90m7 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pgpass/lib/index.js [Client Component Browser]
+    ./node_modules/pg/lib/client.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pg/lib/connection.js:94:19
+Error: Module not found: Can't resolve 'net'
+  [90m92 |[0m       }
+  [90m93 |[0m
+[31m[1m>[0m [90m94 |[0m       [36mconst[0m net = require([32m'net'[0m)
+  [90m   |[0m                   [31m[1m^^^^^^^^^^^^^^[0m
+  [90m95 |[0m       [36mif[0m (net.isIP && net.isIP(host) === [35m0[0m) {
+  [90m96 |[0m         options.servername = host
+  [90m97 |[0m       }
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pg/lib/stream.js:22:17
+Error: Module not found: Can't resolve 'net'
+  [90m20 |[0m [36mfunction[0m getNodejsStreamFuncs() {
+  [90m21 |[0m   [36mfunction[0m getStream(ssl) {
+[31m[1m>[0m [90m22 |[0m     [36mconst[0m net = require([32m'net'[0m)
+  [90m   |[0m                 [31m[1m^^^^^^^^^^^^^^[0m
+  [90m23 |[0m     [36mreturn[0m [36mnew[0m net.[33mSocket[0m()
+  [90m24 |[0m   }
+  [90m25 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/stream.js [Client Component Browser]
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/pg/lib/stream.js:27:17
+Error: Module not found: Can't resolve 'tls'
+  [90m25 |[0m
+  [90m26 |[0m   [36mfunction[0m getSecureStream(options) {
+[31m[1m>[0m [90m27 |[0m     [36mconst[0m tls = require([32m'tls'[0m)
+  [90m   |[0m                 [31m[1m^^^^^^^^^^^^^^[0m
+  [90m28 |[0m     [36mreturn[0m tls.connect(options)
+  [90m29 |[0m   }
+  [90m30 |[0m   [36mreturn[0m {
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/pg/lib/stream.js [Client Component Browser]
+    ./node_modules/pg/lib/connection.js [Client Component Browser]
+    ./node_modules/pg/lib/index.js [Client Component Browser]
+    ./node_modules/pg/esm/index.mjs [Client Component Browser]
+    ./node_modules/@prisma/adapter-pg/dist/index.mjs [Client Component Browser]
+    ./src/lib/db.ts [Client Component Browser]
+    ./src/lib/patients-duplicates.ts [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Client Component Browser]
+    ./src/components/patients/patient-form.tsx [Server Component]
+    ./src/app/[locale]/(app)/patients/new/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 206ms
+ GET / 200 in 767ms (next.js: 90ms, proxy.ts: 17ms, generate-params: 8ms, application-code: 651ms)

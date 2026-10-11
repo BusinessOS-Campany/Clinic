@@ -1,0 +1,425 @@
+
+> clinicos@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://100.74.84.2:3000
+- Environments: .env
+✓ Ready in 2.8s
+✓ Running next.config.ts took 550ms
+
+○ Compiling /[locale]/appointments/new ...
+ GET /appointments/new 200 in 9.3s (next.js: 7.0s, proxy.ts: 234ms, generate-params: 1038ms, application-code: 1079ms)
+ GET /en/nursing 307 in 2.5s (next.js: 1299ms, proxy.ts: 10ms, generate-params: 1049ms, application-code: 136ms)
+✓ Compiled in 87ms
+ GET /appointments/new 200 in 367ms (next.js: 144ms, proxy.ts: 7ms, generate-params: 14ms, application-code: 203ms)
+✓ Compiled in 95ms
+ GET /appointments/new 200 in 161ms (next.js: 24ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 127ms)
+✓ Compiled in 181ms
+ GET /reception 200 in 1404ms (next.js: 243ms, proxy.ts: 4ms, generate-params: 978ms, application-code: 179ms)
+ GET /appointments/new?date=2026-10-11 200 in 126ms (next.js: 12ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 102ms)
+ GET /patients 200 in 1256ms (next.js: 128ms, proxy.ts: 4ms, generate-params: 937ms, application-code: 186ms)
+ GET /nursing 200 in 229ms (next.js: 88ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 129ms)
+ GET /encounters 200 in 1355ms (next.js: 178ms, proxy.ts: 4ms, generate-params: 981ms, application-code: 191ms)
+ GET /lab 200 in 1537ms (next.js: 219ms, proxy.ts: 8ms, generate-params: 1107ms, application-code: 202ms)
+ GET /patients 200 in 241ms (next.js: 29ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 201ms)
+ GET /patients/new 200 in 1505ms (next.js: 276ms, proxy.ts: 4ms, generate-params: 1130ms, application-code: 95ms)
+ POST /patients/new 200 in 192ms (next.js: 16ms, proxy.ts: 8ms, generate-params: 7ms, application-code: 161ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"","...":"3 items not stringified"}, undefined) in 96ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 67ms (next.js: 17ms, proxy.ts: 6ms, generate-params: 8ms, application-code: 36ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"","...":"3 items not stringified"}, undefined) in 23ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 47ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 29ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"","...":"3 items not stringified"}, undefined) in 16ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 38ms (next.js: 9ms, proxy.ts: 6ms, generate-params: 0.0ms, application-code: 23ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"","...":"3 items not stringified"}, undefined) in 12ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 183ms (next.js: 31ms, proxy.ts: 90ms, generate-params: 13ms, application-code: 49ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"","...":"3 items not stringified"}, undefined) in 23ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 47ms (next.js: 8ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 29ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"حمي","...":"3 items not stringified"}, undefined) in 16ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 45ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 27ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 13ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 113ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 94ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"2011-02-11","firstNameAr":"محمد","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 82ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 43ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 25ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"2011-02-11","firstNameAr":"محمد","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 13ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 41ms (next.js: 8ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 24ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"2011-02-11","firstNameAr":"محمد","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 11ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 52ms (next.js: 10ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 30ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"2011-02-11","firstNameAr":"محمد","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 16ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 252ms (next.js: 10ms, proxy.ts: 6ms, generate-params: 7ms, application-code: 230ms)
+  └─ ƒ createPatient({"birthDate":"2011-02-11","city":"AMANAT_SANA_A","firstNameAr":"محمد","...":"7 items not stringified"}, undefined) in 55ms src/app/[locale]/(app)/patients/actions.ts
+ GET /patients/new 200 in 508ms (next.js: 65ms, proxy.ts: 8ms, generate-params: 8ms, application-code: 428ms)
+ GET /patients 200 in 224ms (next.js: 18ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 196ms)
+ GET /patients/cmv3wp4fj00018gvhg31adoq5 200 in 1667ms (next.js: 1197ms, proxy.ts: 4ms, application-code: 465ms)
+ GET /nursing 200 in 234ms (next.js: 75ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 148ms)
+ GET /reception 200 in 239ms (next.js: 95ms, proxy.ts: 3ms, generate-params: 5ms, application-code: 135ms)
+ GET /appointments/new?date=2026-10-11 200 in 130ms (next.js: 30ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 90ms)
+ GET /reception 200 in 117ms (next.js: 11ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 95ms)
+ GET /appointments 200 in 1139ms (next.js: 135ms, proxy.ts: 4ms, generate-params: 903ms, application-code: 96ms)
+ GET /reception 200 in 131ms (next.js: 18ms, proxy.ts: 6ms, generate-params: 9ms, application-code: 98ms)
+ GET /appointments/new?date=2026-10-11 200 in 199ms (next.js: 77ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 112ms)
+ GET /patients 200 in 239ms (next.js: 25ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 204ms)
+ GET /patients/cmv3wp4fj00018gvhg31adoq5 200 in 383ms (next.js: 46ms, proxy.ts: 4ms, application-code: 333ms)
+ POST /patients/cmv3wp4fj00018gvhg31adoq5 200 in 257ms (next.js: 29ms, proxy.ts: 5ms, application-code: 223ms)
+  └─ ƒ listVisitOptions() in 187ms src/app/[locale]/(app)/visits/actions.ts
+ GET /patients 200 in 321ms (next.js: 11ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 297ms)
+ GET /patients?q=%D9%87%D9%8A 200 in 176ms (next.js: 12ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 154ms)
+ GET /patients 200 in 204ms (next.js: 13ms, proxy.ts: 6ms, generate-params: 7ms, application-code: 178ms)
+ GET /patients/new 200 in 167ms (next.js: 28ms, proxy.ts: 4ms, generate-params: 8ms, application-code: 127ms)
+ POST /patients/new 200 in 54ms (next.js: 10ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 34ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"","...":"3 items not stringified"}, undefined) in 21ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 194ms (next.js: 33ms, proxy.ts: 10ms, generate-params: 15ms, application-code: 136ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"","...":"3 items not stringified"}, undefined) in 72ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 48ms (next.js: 12ms, proxy.ts: 5ms, generate-params: 0.0ms, application-code: 30ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"","...":"3 items not stringified"}, undefined) in 15ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 54ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 36ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"محمد","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 24ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 113ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 94ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"2011-02-11","firstNameAr":"محمد","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 82ms src/app/[locale]/(app)/patients/identity-actions.ts
+ GET /patients/new 200 in 158ms (next.js: 11ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 137ms)
+ POST /patients/new 200 in 60ms (next.js: 12ms, proxy.ts: 5ms, generate-params: 5ms, application-code: 38ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"ايمن","lastNameAr":"","...":"3 items not stringified"}, undefined) in 25ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 56ms (next.js: 10ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 36ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"ايمن","lastNameAr":"","...":"3 items not stringified"}, undefined) in 24ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 43ms (next.js: 10ms, proxy.ts: 4ms, generate-params: 0.0ms, application-code: 29ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"ايمن","lastNameAr":"","...":"3 items not stringified"}, undefined) in 18ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 57ms (next.js: 9ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 38ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"ايمن","lastNameAr":"ي","...":"3 items not stringified"}, undefined) in 26ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 39ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 0.0ms, application-code: 26ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"ايمن","lastNameAr":"","...":"3 items not stringified"}, undefined) in 16ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 54ms (next.js: 11ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 34ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 22ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 111ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 93ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 77ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 45ms (next.js: 9ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 27ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 14ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 101ms (next.js: 10ms, proxy.ts: 6ms, generate-params: 6ms, application-code: 79ms)
+  └─ ƒ createPatient({"birthDate":"1998-03-01","city":"AMANAT_SANA_A","firstNameAr":"ايمن","...":"7 items not stringified"}, undefined) in 68ms src/app/[locale]/(app)/patients/actions.ts
+ POST /patients/new 200 in 121ms (next.js: 11ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 99ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 85ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 58ms (next.js: 12ms, proxy.ts: 4ms, generate-params: 0.0ms, application-code: 41ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 29ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 60ms (next.js: 12ms, proxy.ts: 7ms, generate-params: 8ms, application-code: 33ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 17ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 44ms (next.js: 11ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 23ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 10ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 55ms (next.js: 14ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 30ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 16ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 37ms (next.js: 11ms, proxy.ts: 5ms, generate-params: 0.0ms, application-code: 22ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 10ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 55ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 36ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 23ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 43ms (next.js: 9ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 25ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 12ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 59ms (next.js: 10ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 39ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 23ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 45ms (next.js: 9ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 27ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 12ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 41ms (next.js: 9ms, proxy.ts: 3ms, generate-params: 5ms, application-code: 23ms)
+  └─ ƒ checkDuplicatePatient({"birthDate":"1998-03-01","firstNameAr":"ايمن","lastNameAr":"حميد","...":"3 items not stringified"}, undefined) in 11ms src/app/[locale]/(app)/patients/identity-actions.ts
+ POST /patients/new 200 in 287ms (next.js: 11ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 265ms)
+  └─ ƒ createPatient({"birthDate":"1998-03-01","city":"AMANAT_SANA_A","firstNameAr":"ايمن","...":"7 items not stringified"}, undefined) in 38ms src/app/[locale]/(app)/patients/actions.ts
+ POST /patients/new 200 in 57ms (next.js: 14ms, proxy.ts: 5ms, generate-params: 0.0ms, application-code: 38ms)
+  └─ ƒ listVisitOptions() in 22ms src/app/[locale]/(app)/visits/actions.ts
+ POST /patients/new 200 in 360ms (next.js: 11ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 336ms)
+  └─ ƒ openVisit("cmv3x7p3x00068gvhgy3d8fa9", {"chiefComplaint":"يعاني من الم في الساق","notes":"الم عادي","priority":"NORMAL","...":"6 items not stringified"}) in 201ms src/app/[locale]/(app)/visits/actions.ts
+ POST /patients/new 200 in 99ms (next.js: 21ms, proxy.ts: 18ms, generate-params: 0.0ms, application-code: 60ms)
+  └─ ƒ createPatient({"birthDate":"1998-03-01","city":"AMANAT_SANA_A","firstNameAr":"ايمن","...":"7 items not stringified"}, undefined) in 46ms src/app/[locale]/(app)/patients/actions.ts
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 793ms (next.js: 103ms, proxy.ts: 16ms, application-code: 674ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 2.2s (next.js: 1633ms, proxy.ts: 16ms, application-code: 502ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 444ms (next.js: 23ms, proxy.ts: 9ms, application-code: 412ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 404ms (next.js: 33ms, proxy.ts: 44ms, application-code: 327ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 532ms (next.js: 24ms, proxy.ts: 4ms, application-code: 503ms)
+ GET /encounters 200 in 223ms (next.js: 91ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 122ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 528ms (next.js: 50ms, proxy.ts: 4ms, application-code: 474ms)
+ GET /billing/new?patient=cmv3x7p3x00068gvhgy3d8fa9 200 in 1375ms (next.js: 406ms, proxy.ts: 4ms, generate-params: 866ms, application-code: 99ms)
+✓ Compiled in 223ms
+ GET /billing/new?patient=cmv3x7p3x00068gvhgy3d8fa9 200 in 582ms (next.js: 307ms, proxy.ts: 13ms, generate-params: 7ms, application-code: 254ms)
+ POST /billing/new?patient=cmv3x7p3x00068gvhgy3d8fa9 200 in 399ms (next.js: 17ms, proxy.ts: 6ms, generate-params: 7ms, application-code: 370ms)
+  └─ ƒ createInvoice({"discount":"","items":["[Object]"],"notes":"","...":"2 items not stringified"}) in 136ms src/app/[locale]/(app)/billing/actions.ts
+ GET /billing/cmv3xbi00000g8gvht70r2iov 200 in 2.2s (next.js: 2.1s, proxy.ts: 7ms, application-code: 93ms)
+ GET /patients 200 in 317ms (next.js: 81ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 226ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 691ms (next.js: 161ms, proxy.ts: 6ms, application-code: 524ms)
+ GET /encounters 200 in 294ms (next.js: 81ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 203ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 580ms (next.js: 92ms, proxy.ts: 5ms, application-code: 483ms)
+✓ Compiled in 530ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 767ms (next.js: 219ms, proxy.ts: 9ms, application-code: 538ms)
+✓ Compiled in 102ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 468ms (next.js: 145ms, proxy.ts: 7ms, application-code: 316ms)
+✓ Compiled in 116ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 410ms (next.js: 86ms, proxy.ts: 5ms, application-code: 319ms)
+✓ Compiled in 88ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 387ms (next.js: 47ms, proxy.ts: 7ms, application-code: 333ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 733ms (next.js: 140ms, proxy.ts: 11ms, application-code: 582ms)
+✓ Compiled in 292ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 457ms (next.js: 181ms, proxy.ts: 21ms, application-code: 256ms)
+ POST /encounters/cmv3x91ah00098gvhiingov3v 200 in 451ms (next.js: 23ms, proxy.ts: 4ms, application-code: 425ms)
+  └─ ƒ saveEncounterDraft("cmv3x91ah00098gvhiingov3v", {"assessment":"","bpDiastolic":"","bpSystolic":"","...":"17 items not stringified"}) in 58ms src/app/[locale]/(app)/encounters/actions.ts
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 260ms (next.js: 19ms, proxy.ts: 10ms, application-code: 231ms)
+✓ Compiled in 125ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 295ms (next.js: 105ms, proxy.ts: 11ms, application-code: 179ms)
+✓ Compiled in 158ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 324ms (next.js: 103ms, proxy.ts: 14ms, application-code: 207ms)
+✓ Compiled in 139ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 404ms (next.js: 129ms, proxy.ts: 15ms, application-code: 260ms)
+ GET /patients 200 in 242ms (next.js: 37ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 194ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 572ms (next.js: 77ms, proxy.ts: 9ms, application-code: 486ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=billing 200 in 258ms (next.js: 22ms, proxy.ts: 4ms, application-code: 232ms)
+✓ Compiled in 117ms
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=billing 200 in 597ms (next.js: 67ms, proxy.ts: 6ms, application-code: 524ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=diagnoses 200 in 250ms (next.js: 15ms, proxy.ts: 3ms, application-code: 232ms)
+ GET /queue 200 in 1980ms (next.js: 743ms, proxy.ts: 3ms, generate-params: 952ms, application-code: 281ms)
+ GET /reception 200 in 358ms (next.js: 180ms, proxy.ts: 4ms, generate-params: 8ms, application-code: 166ms)
+ GET /queue 200 in 248ms (next.js: 128ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 110ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 420ms (next.js: 63ms, proxy.ts: 4ms, application-code: 353ms)
+ GET /patients 200 in 318ms (next.js: 41ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 268ms)
+✓ Compiled in 276ms
+ GET /patients 200 in 314ms (next.js: 89ms, proxy.ts: 5ms, generate-params: 11ms, application-code: 209ms)
+ GET /nursing 200 in 238ms (next.js: 82ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 147ms)
+ GET /reception 200 in 139ms (next.js: 20ms, proxy.ts: 7ms, generate-params: 7ms, application-code: 105ms)
+ GET /patients 200 in 261ms (next.js: 10ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 240ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 1102ms (next.js: 144ms, proxy.ts: 13ms, application-code: 945ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9/chart 200 in 4.1s (next.js: 3.9s, proxy.ts: 10ms, application-code: 189ms)
+ GET /encounters/new 200 in 1291ms (next.js: 267ms, proxy.ts: 4ms, generate-params: 915ms, application-code: 105ms)
+ GET /patients 200 in 241ms (next.js: 33ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 197ms)
+ GET /patients?q=%D8%A7%D9%8A%D9%86%D8%AA 200 in 152ms (next.js: 11ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 132ms)
+ GET /patients?q=%D8%A7%D9%8A%D9%85%D9%86 200 in 163ms (next.js: 10ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 145ms)
+ GET /patients 200 in 191ms (next.js: 11ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 169ms)
+ GET /patients?q=%D9%8A%D8%AB%D9%85 200 in 169ms (next.js: 12ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 145ms)
+ GET /patients 200 in 231ms (next.js: 16ms, proxy.ts: 7ms, generate-params: 0.1ms, application-code: 208ms)
+ GET /patients?q=%D9%87 200 in 521ms (next.js: 13ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 497ms)
+ GET /patients?q=%D9%87%D8%AB%D9%85 200 in 1603ms (next.js: 1397ms, proxy.ts: 11ms, generate-params: 0.0ms, application-code: 195ms)
+ GET /patients?q=%D9%87%D8%AB 200 in 138ms (next.js: 10ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 119ms)
+ GET /patients?q=%D9%87%D9%8A%D8%AB 200 in 153ms (next.js: 10ms, proxy.ts: 3ms, generate-params: 5ms, application-code: 134ms)
+ GET /patients?q=%D9%87%D9%8A%D8%AB%D9%85 200 in 157ms (next.js: 14ms, proxy.ts: 5ms, generate-params: 0.0ms, application-code: 138ms)
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c 200 in 478ms (next.js: 33ms, proxy.ts: 4ms, application-code: 441ms)
+ GET /patients/merges/new?primary=cmv1wx01l0006e8vhfejz7z0c 200 in 1247ms (next.js: 377ms, proxy.ts: 3ms, generate-params: 758ms, application-code: 109ms)
+✓ Compiled in 333ms
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c 200 in 956ms (next.js: 234ms, proxy.ts: 8ms, application-code: 714ms)
+✓ Compiled in 84ms
+✓ Compiled in 87ms
+✓ Compiled in 79ms
+✓ Compiled in 65ms
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c 200 in 512ms (next.js: 76ms, proxy.ts: 4ms, application-code: 432ms)
+✓ Compiled in 85ms
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c 200 in 293ms (next.js: 22ms, proxy.ts: 3ms, application-code: 267ms)
+✓ Compiled in 71ms
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c 200 in 302ms (next.js: 20ms, proxy.ts: 5ms, application-code: 277ms)
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c?tab=medications 200 in 778ms (next.js: 23ms, proxy.ts: 5ms, application-code: 749ms)
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c?tab=history 200 in 396ms (next.js: 17ms, proxy.ts: 5ms, application-code: 374ms)
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c?tab=history 200 in 395ms (next.js: 110ms, proxy.ts: 10ms, application-code: 275ms)
+✓ Compiled in 283ms
+✓ Compiled in 350ms
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c?tab=history 200 in 691ms (next.js: 138ms, proxy.ts: 5ms, application-code: 548ms)
+✓ Compiled in 323ms
+ GET /patients/cmv1wx01l0006e8vhfejz7z0c?tab=history 200 in 507ms (next.js: 65ms, proxy.ts: 5ms, application-code: 436ms)
+ GET /queue 200 in 340ms (next.js: 27ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 304ms)
+ POST /queue 200 in 351ms (next.js: 11ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 330ms)
+  └─ ƒ callNextEntry("cmv2ubuwf001wxcvh8v7oz155") in 47ms src/app/[locale]/(app)/visits/actions.ts
+ GET /queue 200 in 212ms (next.js: 15ms, proxy.ts: 17ms, generate-params: 0.0ms, application-code: 180ms)
+ POST /queue 200 in 259ms (next.js: 10ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 238ms)
+  └─ ƒ setQueueEntryStatus("cmv3x91b2000b8gvhz2akrsag", "IN_PROGRESS") in 36ms src/app/[locale]/(app)/visits/actions.ts
+ GET /queue 200 in 150ms (next.js: 21ms, proxy.ts: 18ms, generate-params: 0.0ms, application-code: 111ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 359ms (next.js: 101ms, proxy.ts: 4ms, application-code: 253ms)
+✓ Compiled in 85ms
+✓ Compiled in 80ms
+✓ Compiled in 91ms
+✓ Compiled in 81ms
+✓ Compiled in 86ms
+✓ Compiled in 89ms
+✓ Compiled in 103ms
+✓ Compiled in 138ms
+✓ Compiled in 152ms
+✓ Compiled in 285ms
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 555ms (next.js: 121ms, proxy.ts: 7ms, application-code: 427ms)
+ GET /nursing 200 in 208ms (next.js: 68ms, proxy.ts: 8ms, generate-params: 6ms, application-code: 126ms)
+✓ Compiled in 111ms
+ GET /nursing 200 in 204ms (next.js: 27ms, proxy.ts: 6ms, generate-params: 9ms, application-code: 162ms)
+ GET /encounters 200 in 241ms (next.js: 52ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 178ms)
+ GET /queue 200 in 138ms (next.js: 26ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 103ms)
+ GET /reception 200 in 134ms (next.js: 29ms, proxy.ts: 5ms, generate-params: 5ms, application-code: 95ms)
+ GET /reception 200 in 113ms (next.js: 12ms, proxy.ts: 4ms, generate-params: 0.0ms, application-code: 97ms)
+✓ Compiled in 114ms
+ GET /reception 200 in 246ms (next.js: 23ms, proxy.ts: 4ms, generate-params: 12ms, application-code: 208ms)
+✓ Compiled in 82ms
+ GET /reception 200 in 162ms (next.js: 17ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 134ms)
+ GET /encounters 200 in 167ms (next.js: 20ms, proxy.ts: 4ms, generate-params: 8ms, application-code: 136ms)
+✓ Compiled in 153ms
+ GET /encounters 200 in 215ms (next.js: 24ms, proxy.ts: 6ms, generate-params: 0.1ms, application-code: 185ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 890ms (next.js: 62ms, proxy.ts: 5ms, application-code: 823ms)
+ GET /patients 200 in 482ms (next.js: 97ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 374ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 422ms (next.js: 37ms, proxy.ts: 3ms, application-code: 382ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=diagnoses 200 in 254ms (next.js: 16ms, proxy.ts: 3ms, application-code: 234ms)
+ POST /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=diagnoses 200 in 74ms (next.js: 16ms, proxy.ts: 4ms, application-code: 54ms)
+  └─ ƒ searchDiagnosisCatalog("") in 33ms src/app/[locale]/(app)/encounters/actions.ts
+✓ Compiled in 123ms
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=diagnoses 200 in 407ms (next.js: 52ms, proxy.ts: 6ms, application-code: 349ms)
+ GET /encounters 200 in 155ms (next.js: 47ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 99ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 642ms (next.js: 72ms, proxy.ts: 4ms, application-code: 566ms)
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 502ms (next.js: 15ms, proxy.ts: 7ms, application-code: 480ms)
+ POST /encounters/cmv3x91ah00098gvhiingov3v 200 in 900ms (next.js: 148ms, proxy.ts: 7ms, application-code: 746ms)
+  └─ ƒ routeVisit("cmv3x91ap000a8gvh81oeeimy", {"destination":"TRIAGE"}) in 101ms src/app/[locale]/(app)/visits/actions.ts
+ POST /encounters/cmv3x91ah00098gvhiingov3v 200 in 430ms (next.js: 17ms, proxy.ts: 4ms, application-code: 408ms)
+  └─ ƒ routeVisit("cmv3x91ap000a8gvh81oeeimy", {"destination":"DOCTOR"}) in 58ms src/app/[locale]/(app)/visits/actions.ts
+ GET /encounters/cmv3x91ah00098gvhiingov3v 200 in 374ms (next.js: 26ms, proxy.ts: 7ms, application-code: 341ms)
+ GET /patients 200 in 391ms (next.js: 27ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 355ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 416ms (next.js: 35ms, proxy.ts: 4ms, application-code: 377ms)
+ GET /en/encounters 307 in 168ms (next.js: 42ms, proxy.ts: 5ms, generate-params: 8ms, application-code: 114ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=diagnoses 200 in 505ms (next.js: 19ms, proxy.ts: 5ms, application-code: 481ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=medications 200 in 549ms (next.js: 19ms, proxy.ts: 5ms, application-code: 525ms)
+ GET /en/encounters/cmv20qwr70010rwvhra1p0hab 307 in 127ms (next.js: 34ms, proxy.ts: 4ms, application-code: 89ms)
+ GET /en/encounters/cmv20qwr70010rwvhra1p0hab/report 307 in 1803ms (next.js: 1693ms, proxy.ts: 4ms, application-code: 105ms)
+✓ Compiled in 174ms
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9?tab=medications 200 in 803ms (next.js: 125ms, proxy.ts: 6ms, application-code: 672ms)
+ GET /encounters 200 in 375ms (next.js: 156ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 209ms)
+ GET /encounters?status=IN_PROGRESS 200 in 131ms (next.js: 10ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 112ms)
+ GET /encounters 200 in 148ms (next.js: 12ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 125ms)
+ GET /queue 200 in 140ms (next.js: 41ms, proxy.ts: 3ms, generate-params: 5ms, application-code: 90ms)
+ GET /queue 200 in 178ms (next.js: 15ms, proxy.ts: 10ms, generate-params: 0.0ms, application-code: 152ms)
+ POST /queue 200 in 351ms (next.js: 11ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 328ms)
+  └─ ƒ setQueueEntryStatus("cmv3y48mg00178gvhxngak9a0", "SKIPPED") in 27ms src/app/[locale]/(app)/visits/actions.ts
+✓ Compiled in 134ms
+ GET /queue 200 in 210ms (next.js: 61ms, proxy.ts: 4ms, generate-params: 0.0ms, application-code: 145ms)
+✓ Compiled in 94ms
+ GET /queue 200 in 189ms (next.js: 35ms, proxy.ts: 5ms, generate-params: 8ms, application-code: 141ms)
+ GET /encounters 200 in 245ms (next.js: 37ms, proxy.ts: 7ms, generate-params: 6ms, application-code: 195ms)
+✓ Compiled in 317ms
+ GET /encounters 200 in 403ms (next.js: 173ms, proxy.ts: 12ms, generate-params: 19ms, application-code: 199ms)
+✓ Compiled in 96ms
+ GET /encounters 200 in 296ms (next.js: 47ms, proxy.ts: 4ms, generate-params: 9ms, application-code: 237ms)
+✓ Compiled in 2.1s
+ GET /encounters 200 in 781ms (next.js: 283ms, proxy.ts: 9ms, generate-params: 17ms, application-code: 472ms)
+✓ Compiled in 169ms
+ GET /encounters 200 in 486ms (next.js: 155ms, proxy.ts: 6ms, generate-params: 8ms, application-code: 316ms)
+✓ Compiled in 94ms
+ GET /encounters 200 in 348ms (next.js: 59ms, proxy.ts: 6ms, generate-params: 14ms, application-code: 270ms)
+✓ Compiled in 147ms
+ GET /encounters 200 in 376ms (next.js: 137ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 228ms)
+✓ Compiled in 186ms
+ GET /encounters 200 in 278ms (next.js: 47ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 220ms)
+✓ Compiled in 104ms
+ GET /encounters 200 in 261ms (next.js: 19ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 231ms)
+ GET /patients 200 in 297ms (next.js: 39ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 247ms)
+✓ Compiled in 202ms
+ GET /patients 200 in 288ms (next.js: 89ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 189ms)
+✓ Compiled in 95ms
+ GET /patients 200 in 388ms (next.js: 17ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 361ms)
+✓ Compiled in 99ms
+ GET /patients 200 in 437ms (next.js: 109ms, proxy.ts: 5ms, generate-params: 11ms, application-code: 313ms)
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 506ms (next.js: 78ms, proxy.ts: 5ms, application-code: 422ms)
+✓ Compiled in 88ms
+ GET /patients/cmv3x7p3x00068gvhgy3d8fa9 200 in 329ms (next.js: 33ms, proxy.ts: 3ms, application-code: 292ms)
+ GET /patients 200 in 190ms (next.js: 18ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 160ms)
+ GET /reports 200 in 1134ms (next.js: 147ms, proxy.ts: 3ms, generate-params: 788ms, application-code: 196ms)
+✓ Compiled in 100ms
+ GET /reports 200 in 284ms (next.js: 43ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 230ms)
+✓ Compiled in 122ms
+ GET /reports 200 in 513ms (next.js: 129ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 373ms)
+ GET /patients 200 in 496ms (next.js: 33ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 453ms)
+✓ Compiled in 177ms
+ GET /patients 200 in 307ms (next.js: 93ms, proxy.ts: 4ms, generate-params: 10ms, application-code: 200ms)
+✓ Compiled in 80ms
+ GET /patients 200 in 362ms (next.js: 21ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 330ms)
+✓ Compiled in 90ms
+ GET /patients 200 in 277ms (next.js: 23ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 242ms)
+ GET / 200 in 1362ms (next.js: 300ms, proxy.ts: 3ms, generate-params: 786ms, application-code: 273ms)
+✓ Compiled in 178ms
+ GET / 200 in 431ms (next.js: 113ms, proxy.ts: 4ms, generate-params: 14ms, application-code: 300ms)
+✓ Compiled in 71ms
+ GET / 200 in 378ms (next.js: 127ms, proxy.ts: 6ms, generate-params: 6ms, application-code: 239ms)
+✓ Compiled in 151ms
+ GET / 200 in 536ms (next.js: 21ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 505ms)
+✓ Compiled in 91ms
+ GET / 200 in 564ms (next.js: 21ms, proxy.ts: 3ms, generate-params: 8ms, application-code: 532ms)
+✓ Compiled in 89ms
+ GET / 200 in 252ms (next.js: 32ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 209ms)
+✓ Compiled in 90ms
+ GET / 200 in 440ms (next.js: 19ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 411ms)
+✓ Compiled in 97ms
+ GET / 200 in 272ms (next.js: 25ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 236ms)
+✓ Compiled in 134ms
+ GET / 200 in 318ms (next.js: 113ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 196ms)
+✓ Compiled in 80ms
+ GET / 200 in 226ms (next.js: 27ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 189ms)
+✓ Compiled in 65ms
+ GET / 200 in 222ms (next.js: 21ms, proxy.ts: 4ms, generate-params: 6ms, application-code: 191ms)
+✓ Compiled in 79ms
+ GET / 200 in 214ms (next.js: 22ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 181ms)
+✓ Compiled in 449ms
+ GET / 200 in 552ms (next.js: 125ms, proxy.ts: 7ms, generate-params: 7ms, application-code: 413ms)
+✓ Compiled in 93ms
+✓ Compiled in 89ms
+ GET / 200 in 497ms (next.js: 25ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 460ms)
+✓ Compiled in 166ms
+ GET / 200 in 630ms (next.js: 114ms, proxy.ts: 7ms, generate-params: 7ms, application-code: 502ms)
+✓ Compiled in 113ms
+✓ Compiled in 108ms
+✓ Compiled in 101ms
+✓ Compiled in 82ms
+ GET / 200 in 431ms (next.js: 49ms, proxy.ts: 3ms, generate-params: 7ms, application-code: 372ms)
+✓ Compiled in 79ms
+ GET / 200 in 318ms (next.js: 49ms, proxy.ts: 4ms, generate-params: 8ms, application-code: 257ms)
+✓ Compiled in 87ms
+ GET / 200 in 516ms (next.js: 34ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 471ms)
+✓ Compiled in 71ms
+ GET / 200 in 349ms (next.js: 38ms, proxy.ts: 6ms, generate-params: 0.0ms, application-code: 305ms)
+✓ Compiled in 161ms
+ GET / 200 in 608ms (next.js: 116ms, proxy.ts: 6ms, generate-params: 6ms, application-code: 481ms)
+✓ Compiled in 79ms
+ GET / 200 in 240ms (next.js: 31ms, proxy.ts: 3ms, generate-params: 6ms, application-code: 199ms)
+✓ Compiled in 82ms
+ GET / 200 in 260ms (next.js: 36ms, proxy.ts: 5ms, generate-params: 8ms, application-code: 210ms)
+✓ Compiled in 103ms
+ GET / 200 in 636ms (next.js: 38ms, proxy.ts: 4ms, generate-params: 8ms, application-code: 586ms)
+ GET /en/pharmacy 307 in 1482ms (next.js: 411ms, proxy.ts: 5ms, generate-params: 963ms, application-code: 103ms)
+ GET /en/lab 307 in 237ms (next.js: 95ms, proxy.ts: 4ms, generate-params: 5ms, application-code: 133ms)
+ GET /en/imaging 307 in 1278ms (next.js: 200ms, proxy.ts: 4ms, generate-params: 977ms, application-code: 98ms)
+ GET /en/pharmacy/rx/cmv2c8k0q000qswvhhaa8le14 307 in 1509ms (next.js: 1404ms, proxy.ts: 3ms, application-code: 101ms)
+ GET /en/lab/requests/cmv20qwre0013rwvheffwpnej 307 in 1513ms (next.js: 1399ms, proxy.ts: 4ms, application-code: 109ms)
+✓ Compiled in 289ms
+ GET / 200 in 720ms (next.js: 202ms, proxy.ts: 13ms, generate-params: 13ms, application-code: 492ms)
+✓ Compiled in 229ms
+ GET / 200 in 609ms (next.js: 163ms, proxy.ts: 6ms, generate-params: 15ms, application-code: 425ms)
+✓ Compiled in 117ms
+ GET / 200 in 566ms (next.js: 64ms, proxy.ts: 5ms, generate-params: 14ms, application-code: 484ms)
+✓ Compiled in 334ms
+ GET / 200 in 488ms (next.js: 17ms, proxy.ts: 11ms, generate-params: 0.0ms, application-code: 461ms)
+ GET / 200 in 722ms (next.js: 88ms, proxy.ts: 6ms, generate-params: 12ms, application-code: 616ms)
+✓ Compiled in 250ms
+ GET / 200 in 685ms (next.js: 152ms, proxy.ts: 3ms, generate-params: 13ms, application-code: 517ms)
+✓ Compiled in 101ms
+ GET / 200 in 546ms (next.js: 39ms, proxy.ts: 4ms, generate-params: 9ms, application-code: 494ms)
+✓ Compiled in 94ms
+ GET / 200 in 588ms (next.js: 28ms, proxy.ts: 3ms, generate-params: 7ms, application-code: 549ms)
+✓ Compiled in 92ms
+ GET / 200 in 325ms (next.js: 26ms, proxy.ts: 7ms, generate-params: 10ms, application-code: 283ms)
+✓ Compiled in 102ms
+ GET / 200 in 313ms (next.js: 28ms, proxy.ts: 7ms, generate-params: 11ms, application-code: 268ms)
+✓ Compiled in 371ms
+ GET / 200 in 449ms (next.js: 29ms, proxy.ts: 6ms, generate-params: 9ms, application-code: 404ms)
+✓ Compiled in 287ms
+ GET / 200 in 634ms (next.js: 125ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 498ms)
+✓ Compiled in 94ms
+ GET / 200 in 515ms (next.js: 29ms, proxy.ts: 5ms, generate-params: 8ms, application-code: 473ms)
+✓ Compiled in 220ms
+ GET / 200 in 1161ms (next.js: 95ms, proxy.ts: 8ms, generate-params: 8ms, application-code: 1051ms)
+✓ Compiled in 218ms
+ GET / 200 in 363ms (next.js: 110ms, proxy.ts: 5ms, generate-params: 6ms, application-code: 242ms)
+✓ Compiled in 190ms
+ GET /en/billing 307 in 1221ms (next.js: 257ms, proxy.ts: 4ms, generate-params: 842ms, application-code: 119ms)
+ GET /en/billing/x/receipt 307 in 1708ms (next.js: 1592ms, proxy.ts: 3ms, application-code: 113ms)
+ GET /en/encounters/cmv20qwr70010rwvhra1p0hab 307 in 305ms (next.js: 187ms, proxy.ts: 6ms, application-code: 112ms)
+✓ Compiled in 349ms
+✓ Compiled in 164ms
+✓ Compiled in 315ms
+✓ Compiled in 177ms
+ GET /en/users 307 in 1771ms (next.js: 761ms, proxy.ts: 6ms, generate-params: 886ms, application-code: 118ms)
+ GET /en/audit 307 in 1341ms (next.js: 245ms, proxy.ts: 3ms, generate-params: 980ms, application-code: 113ms)
+ GET /en/billing/new 307 in 183ms (next.js: 56ms, proxy.ts: 4ms, generate-params: 8ms, application-code: 116ms)
+ GET /en/appointments/new 307 in 322ms (next.js: 113ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 198ms)
+ GET /en/imaging 307 in 254ms (next.js: 82ms, proxy.ts: 7ms, generate-params: 9ms, application-code: 157ms)
+ GET /en/reception 307 in 245ms (next.js: 58ms, proxy.ts: 7ms, generate-params: 11ms, application-code: 169ms)
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\D:\\Business OS\\clinicOS\\clinicOS\\.next\\package.json").
+✓ Compiled in 307ms
+[?25h
