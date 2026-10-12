@@ -1,6 +1,3 @@
--- CreateSchema
-CREATE SCHEMA IF NOT EXISTS "public";
-
 -- CreateEnum
 CREATE TYPE "RoomType" AS ENUM ('CONSULTATION', 'TREATMENT', 'PROCEDURE', 'LABORATORY', 'IMAGING', 'DENTAL', 'OPERATING_THEATER', 'RECOVERY', 'PHARMACY', 'WAITING', 'STORAGE', 'OTHER');
 
@@ -56,7 +53,7 @@ CREATE TYPE "AppointmentStatus" AS ENUM ('SCHEDULED', 'CONFIRMED', 'ARRIVED', 'I
 CREATE TYPE "EncounterStatus" AS ENUM ('DRAFT', 'IN_PROGRESS', 'SIGNED', 'AMENDED', 'COMPLETED', 'CANCELLED');
 
 -- CreateEnum
-CREATE TYPE "VisitStatus" AS ENUM ('REGISTERED', 'TRIAGE', 'WAITING', 'IN_SERVICE', 'COMPLETED', 'CANCELLED', 'NO_SHOW');
+CREATE TYPE "VisitStatus" AS ENUM ('REGISTERED', 'TRIAGE', 'WAITING', 'IN_SERVICE', 'UNDER_EXAMINATION', 'AWAITING_RESULTS', 'AWAITING_REVIEW', 'COMPLETED', 'REFERRED', 'CANCELLED', 'NO_SHOW');
 
 -- CreateEnum
 CREATE TYPE "VisitSource" AS ENUM ('WALK_IN', 'APPOINTMENT');
@@ -78,6 +75,9 @@ CREATE TYPE "ReferralSource" AS ENUM ('SELF', 'DOCTOR', 'HOSPITAL', 'OTHER');
 
 -- CreateEnum
 CREATE TYPE "DiagnosisStatus" AS ENUM ('SUSPECTED', 'PROVISIONAL', 'CONFIRMED', 'RULED_OUT', 'RESOLVED', 'CHRONIC');
+
+-- CreateEnum
+CREATE TYPE "DiagnosisConfidence" AS ENUM ('LOW', 'MEDIUM', 'HIGH');
 
 -- CreateEnum
 CREATE TYPE "DiagnosisClassification" AS ENUM ('ICD10', 'ICD11', 'SNOMED_CT', 'LOCAL');
@@ -669,6 +669,13 @@ CREATE TABLE "Encounter" (
     "physicalExamination" TEXT,
     "assessment" TEXT,
     "plan" TEXT,
+    "painLocation" TEXT,
+    "symptomNature" TEXT,
+    "aggravatingFactors" TEXT,
+    "alleviatingFactors" TEXT,
+    "history" JSONB,
+    "examination" JSONB,
+    "treatmentPlan" JSONB,
     "temperature" DECIMAL(65,30),
     "pulse" INTEGER,
     "respRate" INTEGER,
@@ -770,6 +777,7 @@ CREATE TABLE "EncounterDiagnosis" (
     "onsetDate" TIMESTAMP(3),
     "codeSystem" TEXT,
     "status" "DiagnosisStatus" NOT NULL DEFAULT 'PROVISIONAL',
+    "confidence" "DiagnosisConfidence",
     "isPrimary" BOOLEAN NOT NULL DEFAULT false,
     "isDifferential" BOOLEAN NOT NULL DEFAULT false,
     "parentDiagnosisId" TEXT,
@@ -825,6 +833,7 @@ CREATE TABLE "MedicalOrder" (
     "prescriptionStatus" "PrescriptionStatus" NOT NULL DEFAULT 'ACTIVE',
     "dispenseAsWritten" BOOLEAN NOT NULL DEFAULT false,
     "clinicalIndication" TEXT,
+    "priority" TEXT,
     "prescribedBy" TEXT,
     "verifiedBy" TEXT,
     "verifiedAt" TIMESTAMP(3),
@@ -1573,6 +1582,7 @@ CREATE TABLE "Notification" (
     "scheduledAt" TIMESTAMP(3),
     "sentAt" TIMESTAMP(3),
     "deliveredAt" TIMESTAMP(3),
+    "readAt" TIMESTAMP(3),
     "failedAt" TIMESTAMP(3),
     "failureReason" TEXT,
     "retryCount" INTEGER NOT NULL DEFAULT 0,
