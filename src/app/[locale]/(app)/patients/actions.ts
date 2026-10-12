@@ -141,13 +141,18 @@ export async function createPatient(
     const clinicId = user.currentClinicId;
     if (!clinicId) return { ok: false, error: "no-clinic" };
 
-    // Check if a patient with this national ID already exists in the clinic
-    const existingPatient = await prisma.patient.findFirst({
-      where: { clinicId, nationalId: parsed.nationalId },
-      select: { id: true },
-    });
-    if (existingPatient) {
-      return { ok: true, id: existingPatient.id, isNew: false };
+    // Check if a patient with this national ID already exists in the clinic.
+    // Only meaningful when a national ID was actually provided — an empty
+    // value must not match arbitrary patients.
+    const nationalId = parsed.nationalId?.trim();
+    if (nationalId) {
+      const existingPatient = await prisma.patient.findFirst({
+        where: { clinicId, nationalId },
+        select: { id: true },
+      });
+      if (existingPatient) {
+        return { ok: true, id: existingPatient.id, isNew: false };
+      }
     }
 
     if (await findDuplicateNationalId(clinicId, parsed.nationalId)) {
