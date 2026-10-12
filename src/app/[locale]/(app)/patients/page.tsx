@@ -92,6 +92,16 @@ export default async function PatientsPage({
       <PageHeader
         title={t("title")}
         icon={Users}
+        actions={
+          canWrite ? (
+            <Button asChild>
+              <Link href="/patients/new">
+                <Plus />
+                {t("newPatient")}
+              </Link>
+            </Button>
+          ) : undefined
+        }
       />
       <div className="flex flex-col gap-3">
         <div className="flex flex-wrap items-start justify-between gap-3">
