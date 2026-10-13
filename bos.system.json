@@ -1,0 +1,11 @@
+{
+  "slug": "clinic",
+  "name": "ClinicOS System",
+  "nameAr": "نظام كلينيكوس",
+  "description": "Patients, appointments, payments and medical records for clinics.",
+  "descriptionAr": "إدارة المرضى والمواعيد والمدفوعات والملفات الطبية للعيادات.",
+  "icon": "stethoscope",
+  "category": "health",
+  "version": "1.0.0",
+  "discoverable": true
+}
