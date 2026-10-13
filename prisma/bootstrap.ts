@@ -20,8 +20,17 @@ import {
   type RoleCode,
 } from "../src/core/rbac/catalog";
 
-// Same connection the runtime uses: the org's own database.
-const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
+// Same connection the runtime uses: the org's own database. The schema is
+// explicit because the pg driver adapter always defaults to `public`, while
+// migrate reads it from ?schema= in the URL.
+const schema =
+  process.env.DATABASE_SCHEMA ??
+  new URL(process.env.DATABASE_URL ?? "").searchParams.get("schema") ??
+  undefined;
+const adapter = new PrismaPg(
+  { connectionString: process.env.DATABASE_URL },
+  { schema },
+);
 const prisma = new PrismaClient({ adapter });
 
 const ROLE_NAMES: Record<RoleCode, { ar: string; en: string }> = {
