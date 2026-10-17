@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { addDays } from "date-fns";
 import { fmtInt, fmtMoney } from "@/lib/format";
@@ -252,14 +253,73 @@ body{font-family:${fontStack};color:#0f172a;font-size:11px;line-height:1.5;paddi
 </html>`;
 }
 
+function isServerless(): boolean {
+  return Boolean(
+    process.env.VERCEL ||
+      process.env.AWS_LAMBDA_FUNCTION_NAME ||
+      process.env.AWS_EXECUTION_ENV,
+  );
+}
+
+function findLocalChromium(): string | undefined {
+  const envPath = process.env.CHROME_PATH || process.env.PUPPETEER_EXECUTABLE_PATH;
+  if (envPath && fs.existsSync(envPath)) return envPath;
+
+  for (const candidate of [
+    "/usr/bin/chromium",
+    "/usr/bin/chromium-browser",
+    "/usr/bin/google-chrome",
+    "/usr/bin/google-chrome-stable",
+  ]) {
+    if (fs.existsSync(candidate)) return candidate;
+  }
+
+  const cacheRoot = path.join(os.homedir(), ".cache", "ms-playwright");
+  try {
+    for (const dir of fs.readdirSync(cacheRoot)) {
+      if (!dir.startsWith("chromium")) continue;
+      const full = path.join(cacheRoot, dir);
+      for (const sub of fs.readdirSync(full)) {
+        const exe = path.join(full, sub, "chrome");
+        if (fs.existsSync(exe)) return exe;
+      }
+    }
+  } catch {
+    // ms-playwright cache not present
+  }
+  return undefined;
+}
+
+async function getBrowser(): Promise<import("puppeteer-core").Browser> {
+  const puppeteer = await import("puppeteer-core");
+
+  if (isServerless()) {
+    const { default: chromium } = await import("@sparticuz/chromium");
+    return puppeteer.launch({
+      args: chromium.args,
+      defaultViewport: { width: 794, height: 1123 },
+      executablePath: await chromium.executablePath(),
+      headless: true,
+    });
+  }
+
+  const executablePath = findLocalChromium();
+  if (!executablePath) {
+    throw new Error(
+      "No local Chromium found. Set CHROME_PATH or install Chrome/Chromium.",
+    );
+  }
+  return puppeteer.launch({
+    args: ["--no-sandbox", "--disable-dev-shm-usage"],
+    defaultViewport: { width: 794, height: 1123 },
+    executablePath,
+    headless: true,
+  });
+}
+
 export async function generateReportPdf(input: ReportPdfInput): Promise<Buffer> {
   const html = renderReportHtml(input);
-  const { chromium } = await import("playwright-core");
-
-  const browser = await chromium.launch({
-    headless: true,
-    args: ["--no-sandbox", "--disable-dev-shm-usage"],
-  });
+  const browser = await getBrowser();
 
   try {
     const page = await browser.newPage();
@@ -270,7 +330,7 @@ export async function generateReportPdf(input: ReportPdfInput): Promise<Buffer> 
       printBackground: true,
       margin: { top: "12mm", bottom: "14mm", left: "10mm", right: "10mm" },
     });
-    return pdf;
+    return Buffer.from(pdf);
   } finally {
     await browser.close();
   }

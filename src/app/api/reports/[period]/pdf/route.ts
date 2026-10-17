@@ -12,6 +12,7 @@ import { generateReportPdf } from "@/lib/reports/report-pdf";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 function isPeriod(value: string): value is ReportPeriod {
   return (REPORT_PERIODS as string[]).includes(value);

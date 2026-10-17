@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   typedRoutes: true,
-  serverExternalPackages: ["playwright-core"],
+  serverExternalPackages: ["puppeteer-core", "@sparticuz/chromium"],
+  outputFileTracingIncludes: {
+    "/api/reports/**": ["./node_modules/@sparticuz/chromium/**"],
+  },
 };
 
 export default withNextIntl(nextConfig);
