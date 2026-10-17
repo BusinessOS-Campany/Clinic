@@ -41,3 +41,8 @@ yarn-error.log*
 # logs
 install.log
 build.log
+
+# temp / scratch
+tmp-*
+/tmp-*
+*.tmp
