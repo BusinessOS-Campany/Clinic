@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { DuplicateWarning } from "@/components/patients/duplicate-warning";
+import type { VisitTypeValue } from "@/app/[locale]/(app)/visits/schema";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CITIES } from "@/app/[locale]/(app)/patients/schema";
 
@@ -36,8 +37,9 @@ export function PatientForm({
   const [pendingOpenVisit, setPendingOpenVisit] = useState(false);
   const [visitPatientId, setVisitPatientId] = useState<string | null>(null);
   const [visitDialogOpen, setVisitDialogOpen] = useState(false);
+  const [visitType, setVisitType] = useState<VisitTypeValue>("NEW");
 
-  const { watch, ...form } = useForm<PatientFormInput>({
+  const { watch, ...form } = useForm<PatientFormInput, unknown, PatientFormValues>({
     resolver: zodResolver(patientFormSchema),
     defaultValues: {
       gender: "MALE",
@@ -102,7 +104,10 @@ export function PatientForm({
   ) {
     setSubmitting(true);
     try {
-      const options = confirmDuplicate ? { confirmDuplicate: true } : undefined;
+      const options = {
+      ...(confirmDuplicate ? { confirmDuplicate: true } : {}),
+      enqueue: !openVisitAfter,
+    };
       const res = patientId
         ? await updatePatient(patientId, values, options)
         : await createPatient(values, options);
@@ -182,8 +187,7 @@ export function PatientForm({
           }}
         />
       )}
-// @ts-expect-error
-<form onSubmit={handleSubmit(onSubmit as any)} className="flex flex-col gap-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col gap-2">
             <Label htmlFor="firstNameAr">{t("firstNameAr")} *</Label>
@@ -201,6 +205,25 @@ export function PatientForm({
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {!patientId && (
+            <div className="flex flex-col gap-2">
+              <Label>{t("visitType")}</Label>
+              <Select
+                value={visitType}
+                onValueChange={(v) => setVisitType(v as VisitTypeValue)}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="NEW">{t("visitType_NEW")}</SelectItem>
+                  <SelectItem value="FOLLOW_UP">
+                    {t("visitType_FOLLOW_UP")}
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          )}
           <div className="flex flex-col gap-2">
             <Label htmlFor="gender">{t("gender")}</Label>
             <Select
@@ -271,15 +294,11 @@ export function PatientForm({
           <Button type="button" variant="outline" onClick={() => router.back()}>
             {tc("cancel")}
           </Button>
-          <Button type="submit" disabled={submitting}>
-            {submitting ? tc("saving") : tc("save")}
-          </Button>
-<Button
-          type="button"
-          variant="outline"
-          disabled={submitting}
-          onClick={() => handleSubmit(onOpenVisit as any)()}
-        >
+          <Button
+            type="button"
+            disabled={submitting}
+            onClick={() => handleSubmit(onOpenVisit)()}
+          >
             {submitting ? tc("saving") : t("saveAndOpenVisit")}
           </Button>
         </div>
@@ -287,6 +306,7 @@ export function PatientForm({
         <OpenVisitDialog
           patientId={visitPatientId}
           open={visitDialogOpen}
+          initialType={visitType}
           onOpenChange={(o) => {
             setVisitDialogOpen(o);
             if (!o && visitPatientId) {

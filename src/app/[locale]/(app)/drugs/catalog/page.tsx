@@ -25,5 +25,11 @@ export default async function DrugCatalogPage() {
     orderBy: { createdAt: "desc" },
   });
 
-  return <DrugCatalogPageContent drugs={drugs} interactions={interactions} canManage={canManage} t={t} />;
+  const serializedDrugs = drugs.map((d) => ({
+    ...d,
+    maxDailyDose: d.maxDailyDose?.toString() ?? null,
+    maxSingleDose: d.maxSingleDose?.toString() ?? null,
+  }));
+
+  return <DrugCatalogPageContent drugs={serializedDrugs} interactions={interactions} canManage={canManage} />;
 }

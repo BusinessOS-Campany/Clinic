@@ -5,14 +5,11 @@ import { requirePermission } from "@/core/auth/session";
 import { can } from "@/core/rbac";
 import { prisma } from "@/lib/db";
 import { displayName } from "@/lib/patient";
-import { loadEncounterSummary } from "@/lib/encounter-summary";
 import { EncounterChart } from "@/components/encounters/encounter-chart";
 import { serializeEncounter } from "@/components/encounters/serialize";
 import { PatientSummaryHeader } from "@/components/encounters/patient-summary-header";
 import { ResultsReviewBanner } from "@/components/encounters/results-review-banner";
 import { VisitClosure } from "@/components/encounters/visit-closure";
-import { VisitPanel } from "@/components/encounters/visit-panel";
-import { PatientInfoCard } from "@/components/encounters/patient-info-card";
 import { EncounterInvoiceButton } from "@/components/billing/encounter-invoice-button";
 import { PageHeader } from "@/components/layout/page-header";
 import { Button } from "@/components/ui/button";
@@ -35,7 +32,6 @@ export default async function EncounterDetailPage({
   const canViewPatient = await can(user, "patients:read");
   const tp = await getTranslations("patients");
   const tb = await getTranslations("billing");
-  const tv = await getTranslations("visits");
 
   const encounter = await prisma.encounter.findFirst({
     where: { id, clinicId },
@@ -66,73 +62,12 @@ export default async function EncounterDetailPage({
   });
   if (!encounter) notFound();
 
-  const labTests = await prisma.labTest.findMany({
-    where: { clinicId, isActive: true },
-    select: { id: true, nameAr: true, nameEn: true, code: true },
-    orderBy: { code: "asc" },
-  });
-
   const visit = await prisma.visit.findFirst({
     where: { encounterId: id, clinicId },
-    include: {
-      registeredBy: { select: { name: true, nameAr: true } },
-      doctor: { select: { name: true } },
-      department: { select: { nameAr: true, nameEn: true } },
-      queueEntries: {
-        where: { status: { in: ["WAITING", "CALLED", "IN_PROGRESS"] } },
-        orderBy: { createdAt: "desc" },
-        take: 1,
-        include: {
-          queue: { select: { nameAr: true, nameEn: true, kind: true } },
-        },
-      },
-    },
+    select: { status: true },
   });
 
-  const canManageVisit = canWrite || (await can(user, "queue:write"));
-
-  const visitPanel = visit
-    ? {
-        id: visit.id,
-        visitNumber: visit.visitNumber,
-        mrn: visit.mrn,
-        arrivedAt: visit.arrivedAt,
-        status: visit.status,
-        type: visit.type,
-        priority: visit.priority,
-        source: visit.source,
-        referralSource: visit.referralSource,
-        reason: visit.reason,
-        chiefComplaint: visit.chiefComplaint,
-        symptomDuration: visit.symptomDurationValue
-          ? `${visit.symptomDurationValue} ${tv(
-              `durationUnit_${visit.symptomDurationUnit ?? "DAYS"}`,
-            )}`
-          : null,
-        registrarName: visit.registeredBy
-          ? visit.registeredBy.nameAr || visit.registeredBy.name
-          : null,
-        doctorName: visit.doctor?.name ?? null,
-        departmentName: visit.department
-          ? locale === "ar"
-            ? visit.department.nameAr
-            : visit.department.nameEn
-          : null,
-        currentQueue: (visit.queueEntries[0]?.queue.kind === "TRIAGE"
-          ? "TRIAGE"
-          : "DOCTOR") as "TRIAGE" | "DOCTOR",
-        queueName: visit.queueEntries[0]
-          ? locale === "ar"
-            ? visit.queueEntries[0].queue.nameAr
-            : visit.queueEntries[0].queue.nameEn
-          : "",
-        position: visit.queueEntries[0]?.position ?? 0,
-        queueStatus: visit.queueEntries[0]?.status ?? "WAITING",
-      }
-    : null;
-
   const chart = serializeEncounter(encounter);
-  const summary = await loadEncounterSummary(clinicId, encounter.patientId);
   const hasPendingOrders = encounter.orders.some((o) => o.status === "PENDING");
   const encounterClosed =
     encounter.status === "COMPLETED" || encounter.status === "SIGNED" || encounter.status === "AMENDED";
@@ -188,36 +123,15 @@ export default async function EncounterDetailPage({
         bloodType={encounter.patient.bloodType}
         insuranceCompany={encounter.patient.insuranceCompany}
         insurancePolicyNumber={encounter.patient.insurancePolicyNumber}
-        summary={summary}
-        locale={locale}
       />
-      {visitPanel && (
-        <VisitPanel visit={visitPanel} locale={locale} canManage={canManageVisit} />
-      )}
       {visit?.status === "AWAITING_RESULTS" && (
         <ResultsReviewBanner encounterId={id} show />
       )}
-      <PatientInfoCard
-        patient={{
-          gender: encounter.patient.gender,
-          birthDate: encounter.patient.birthDate,
-          phone: encounter.patient.phone,
-          phone2: encounter.patient.phone2,
-          city: encounter.patient.city,
-          price: encounter.patient.price,
-          notes: encounter.patient.notes,
-        }}
-        locale={locale}
-      />
       <EncounterChart
         encounter={chart}
         canWrite={canWrite}
         canSign={canSign}
         canAmend={canAmend}
-        labTests={labTests.map((lt) => ({
-          id: lt.id,
-          label: `${lt.code} — ${lt.nameAr || lt.nameEn}`,
-        }))}
       />
       {!encounterClosed && (
         <div className="flex justify-end">

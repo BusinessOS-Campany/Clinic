@@ -13,6 +13,7 @@ import {
   Receipt,
   Stethoscope,
   UserPlus,
+  Users,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -27,6 +28,7 @@ export type QuickActionIcon =
   | "receipt"
   | "flask"
   | "pill"
+  | "users"
   | "chartBar";
 
 export type QuickActionTone = "primary" | "info" | "success" | "warning" | "violet";
@@ -47,6 +49,7 @@ const ICONS = {
   receipt: Receipt,
   flask: FlaskConical,
   pill: Pill,
+  users: Users,
   chartBar: ChartNoAxesColumn,
 } as const;
 
@@ -66,7 +69,7 @@ export function QuickActions({ actions }: { actions: QuickAction[] }) {
       initial={reduce ? false : { opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.5, ease: EASE }}
-      className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4"
+      className="grid grid-cols-2 gap-3 xl:grid-cols-5"
     >
       {actions.map((a, i) => {
         const Icon = ICONS[a.icon];
@@ -77,34 +80,44 @@ export function QuickActions({ actions }: { actions: QuickAction[] }) {
             initial={reduce ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.55 + i * 0.06, ease: EASE }}
+            className="h-full"
           >
             <Link
               href={a.href}
               style={{ "--qa-accent": accent } as React.CSSProperties}
               className={cn(
-                "group relative flex items-center gap-3 overflow-hidden rounded-xl border bg-card p-3.5",
+                "group relative flex h-full min-h-[7rem] flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-card p-3.5",
                 "transition-all duration-300",
                 "hover:-translate-y-0.5 hover:border-[color-mix(in_srgb,var(--qa-accent)_45%,var(--border))]",
                 "hover:shadow-lg hover:shadow-[color-mix(in_srgb,var(--qa-accent)_12%,transparent)]",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                "sm:min-h-0 sm:flex-row sm:items-center sm:gap-3",
               )}
             >
               <span
-                className="flex size-10 shrink-0 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-110"
+                aria-hidden
+                className="pointer-events-none absolute -end-5 -top-7 size-24 rounded-full opacity-30 blur-2xl transition-opacity duration-500 group-hover:opacity-60"
+                style={{ background: "var(--qa-accent)" }}
+              />
+
+              <span
+                className="relative flex size-11 shrink-0 items-center justify-center rounded-xl border border-[color-mix(in_srgb,var(--qa-accent)_22%,transparent)] transition-transform duration-300 group-hover:scale-110"
                 style={{
-                  background: "color-mix(in srgb, var(--qa-accent) 13%, transparent)",
+                  background: "color-mix(in srgb, var(--qa-accent) 14%, transparent)",
                   color: "var(--qa-accent)",
                 }}
               >
                 <Icon className="size-5" aria-hidden />
               </span>
 
-              <span className="flex min-w-0 flex-1 flex-col">
-                <span className="truncate text-sm font-medium">{a.label}</span>
+              <span className="relative flex min-w-0 flex-1 flex-col">
+                <span className="text-sm font-semibold leading-snug sm:truncate">
+                  {a.label}
+                </span>
               </span>
 
               <ArrowUpRight
-                className="size-4 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--qa-accent)] rtl:rotate-180 rtl:group-hover:-translate-x-0.5"
+                className="absolute end-3 top-3 size-4 text-muted-foreground/70 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--qa-accent)] rtl:rotate-180 rtl:group-hover:-translate-x-0.5 sm:static sm:ms-auto sm:self-center"
                 aria-hidden
               />
 

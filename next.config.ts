@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   typedRoutes: true,
+  serverExternalPackages: ["playwright-core"],
 };
 
 export default withNextIntl(nextConfig);

@@ -12,7 +12,6 @@ import {
 } from "@/components/reception/reception-board";
 import { PageHeader } from "@/components/layout/page-header";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { StatCard } from "@/components/dashboard/stat-card";
 
 const ACTIVE_WAITING = ["SCHEDULED", "CONFIRMED", "ARRIVED"];
@@ -62,12 +61,17 @@ export default async function ReceptionPage() {
     doctorName: a.doctor?.name ?? null,
     status: a.status,
     time: toClock(a.startTime),
+    type: a.type,
   }));
 
-  const waiting = items.filter((i) => ACTIVE_WAITING.includes(i.status));
-  const inService = items.filter((i) => i.status === "IN_SERVICE");
-  const completed = items.filter((i) => i.status === "COMPLETED");
-  const unattended = items.filter(
+  // عودة = موعد متابعة (FOLLOW_UP). أي نوع آخر يُعامل كزيارة أولى/عيادة.
+  const returns = items.filter((i) => i.type === "FOLLOW_UP");
+  const standard = items.filter((i) => i.type !== "FOLLOW_UP");
+
+  const waiting = standard.filter((i) => ACTIVE_WAITING.includes(i.status));
+  const inService = standard.filter((i) => i.status === "IN_SERVICE");
+  const completed = standard.filter((i) => i.status === "COMPLETED");
+  const unattended = standard.filter(
     (i) => i.status === "CANCELLED" || i.status === "NO_SHOW",
   );
 
@@ -75,6 +79,7 @@ export default async function ReceptionPage() {
 
   const stats = [
     { icon: "users" as const, label: t("statWaiting"), value: waiting.length, tone: "warning" as const, format: "int" as const },
+    { icon: "users" as const, label: t("statReturns"), value: returns.length, tone: "info" as const, format: "int" as const },
     { icon: "users" as const, label: t("statInService"), value: inService.length, tone: "violet" as const, format: "int" as const },
     { icon: "checkCircle" as const, label: t("statCompleted"), value: completed.length, tone: "success" as const, format: "int" as const },
     { icon: "xCircle" as const, label: t("statUnattended"), value: unattended.length, tone: "danger" as const, format: "int" as const },
@@ -97,7 +102,7 @@ export default async function ReceptionPage() {
         }
       />
 
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
         {stats.map((s, i) => (
           <StatCard
             key={s.label}
@@ -112,6 +117,7 @@ export default async function ReceptionPage() {
       </div>
 
       <ReceptionBoard
+        returns={returns}
         waiting={waiting}
         inService={inService}
         completed={completed}

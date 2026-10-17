@@ -1,11 +1,16 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { Prisma } from "@/lib/generated/prisma/client";
 import { requireAnyPermission } from "@/core/auth/session";
 import { can } from "@/core/rbac";
 import { recordAudit } from "@/core/audit";
 import { prisma } from "@/lib/db";
+import {
+  ACTIVE_ENTRY_STATUSES,
+  PRIORITY_WEIGHT,
+  ensureQueue,
+  nextVisitNumber,
+} from "@/lib/visits/queue";
 import {
   openVisitSchema,
   routeVisitSchema,
@@ -13,7 +18,6 @@ import {
   type QueueEntryStatusValue,
   type VisitRoute,
   type VisitTypeValue,
-  type VisitPriorityValue,
 } from "./schema";
 
 type VisitError = "no-clinic" | "not-found" | "invalid" | "not-allowed";
@@ -26,55 +30,8 @@ type Result = { ok: true } | { ok: false; error: VisitError };
 
 export type VisitOption = { id: string; nameAr: string; nameEn: string };
 
-const ACTIVE_ENTRY = ["WAITING", "CALLED", "IN_PROGRESS"] as const;
-
-const QUEUE_META: Record<VisitRoute, { nameAr: string; nameEn: string }> = {
-  TRIAGE: { nameAr: "الفرز والعلامات الحيوية", nameEn: "Triage & Vitals" },
-  DOCTOR: { nameAr: "طابور الأطباء", nameEn: "Doctor Queue" },
-};
-
-const PRIORITY_WEIGHT: Record<VisitPriorityValue, number> = {
-  NORMAL: 0,
-  URGENT: 10,
-  EMERGENCY: 20,
-};
-
 function encounterTypeFor(type: VisitTypeValue): "INITIAL" | "FOLLOW_UP" {
   return type === "FOLLOW_UP" ? "FOLLOW_UP" : "INITIAL";
-}
-
-async function ensureQueue(clinicId: string, kind: VisitRoute) {
-  const existing = await prisma.queue.findFirst({
-    where: { clinicId, code: kind },
-    select: { id: true },
-  });
-  if (existing) return existing;
-  return prisma.queue.create({
-    data: { clinicId, code: kind, kind, ...QUEUE_META[kind] },
-    select: { id: true },
-  });
-}
-
-async function nextVisitNumber(
-  tx: Prisma.TransactionClient,
-  clinicId: string,
-): Promise<string> {
-  const seq = await tx.numberSequence.upsert({
-    where: { clinicId_key: { clinicId, key: "VISIT" } },
-    create: {
-      clinicId,
-      key: "VISIT",
-      prefix: "V",
-      currentValue: 1n,
-      padLength: 5,
-    },
-    update: { currentValue: { increment: 1 } },
-  });
-  const padded = String(seq.currentValue).padStart(
-    seq.padLength > 0 ? seq.padLength : 5,
-    "0",
-  );
-  return `${seq.prefix ?? ""}${padded}${seq.suffix ?? ""}`;
 }
 
 function revalidateVisitPaths(patientId: string) {
@@ -225,7 +182,7 @@ export async function openVisit(
     });
 
     const activeCount = await tx.queueEntry.count({
-      where: { queueId: queue.id, status: { in: [...ACTIVE_ENTRY] } },
+      where: { queueId: queue.id, status: { in: [...ACTIVE_ENTRY_STATUSES] } },
     });
 
     await tx.queueEntry.create({
@@ -262,12 +219,11 @@ export async function openVisit(
 
   revalidateVisitPaths(patientId);
 
-  const canViewEncounter = await can(user, "encounters:read");
   return {
     ok: true,
     visitId: created.visitId,
     encounterId: created.encounterId,
-    redirectTo: canViewEncounter ? `/encounters/${created.encounterId}` : "/queue",
+    redirectTo: "/queue",
   };
 }
 
@@ -298,12 +254,12 @@ export async function routeVisit(
 
   await prisma.$transaction(async (tx) => {
     await tx.queueEntry.updateMany({
-      where: { visitId, status: { in: [...ACTIVE_ENTRY] } },
+      where: { visitId, status: { in: [...ACTIVE_ENTRY_STATUSES] } },
       data: { status: "CANCELLED" },
     });
 
     const activeCount = await tx.queueEntry.count({
-      where: { queueId: queue.id, status: { in: [...ACTIVE_ENTRY] } },
+      where: { queueId: queue.id, status: { in: [...ACTIVE_ENTRY_STATUSES] } },
     });
 
     await tx.queueEntry.create({

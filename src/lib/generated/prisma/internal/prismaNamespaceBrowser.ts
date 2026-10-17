@@ -126,7 +126,8 @@ export const ModelName = {
   NotificationRetryPolicy: 'NotificationRetryPolicy',
   VitalSign: 'VitalSign',
   VitalAlertRule: 'VitalAlertRule',
-  VitalAlert: 'VitalAlert'
+  VitalAlert: 'VitalAlert',
+  Task: 'Task'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -602,6 +603,11 @@ export const EncounterScalarFieldEnum = {
   physicalExamination: 'physicalExamination',
   assessment: 'assessment',
   plan: 'plan',
+  symptomsText: 'symptomsText',
+  diagnosisText: 'diagnosisText',
+  labsText: 'labsText',
+  imagingText: 'imagingText',
+  treatmentsText: 'treatmentsText',
   painLocation: 'painLocation',
   symptomNature: 'symptomNature',
   aggravatingFactors: 'aggravatingFactors',
@@ -1668,6 +1674,24 @@ export const VitalAlertScalarFieldEnum = {
 } as const
 
 export type VitalAlertScalarFieldEnum = (typeof VitalAlertScalarFieldEnum)[keyof typeof VitalAlertScalarFieldEnum]
+
+
+export const TaskScalarFieldEnum = {
+  id: 'id',
+  clinicId: 'clinicId',
+  title: 'title',
+  description: 'description',
+  status: 'status',
+  priority: 'priority',
+  dueDate: 'dueDate',
+  completedAt: 'completedAt',
+  createdById: 'createdById',
+  assignedToId: 'assignedToId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type TaskScalarFieldEnum = (typeof TaskScalarFieldEnum)[keyof typeof TaskScalarFieldEnum]
 
 
 export const SortOrder = {

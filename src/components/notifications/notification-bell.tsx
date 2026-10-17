@@ -294,5 +294,5 @@ function format(date: Date, formatStr: string, options: { locale: any }) {
   if (formatStr === "HH:mm") {
     return date.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false });
   }
-  return date.toLocaleString();
+  return date.toLocaleString("en-US");
 }

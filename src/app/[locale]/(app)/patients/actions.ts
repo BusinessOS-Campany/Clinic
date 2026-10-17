@@ -10,6 +10,7 @@ import {
   probableDuplicates,
   type DuplicateCandidate,
 } from "@/lib/patients-duplicates";
+import { enqueuePatient } from "@/lib/visits/queue";
 import { patientFormSchema, type PatientFormValues } from "./schema";
 
 type ActionError =
@@ -27,6 +28,12 @@ type ActionResult =
 export type SavePatientOptions = {
   /** Set once the user has reviewed duplicate candidates and wants to proceed. */
   confirmDuplicate?: boolean;
+  /**
+   * Whether registration should place the patient in the live queue. Defaults
+   * to true; the "save and open visit" flow passes false because the visit
+   * dialog already enqueues the patient.
+   */
+  enqueue?: boolean;
 };
 
 export type DeletePatientResult =
@@ -37,25 +44,26 @@ export type DeletePatientResult =
       counts?: { encounters: number; visits: number; invoices: number };
     };
 
-async function nextMrn(clinicId: string): Promise<string> {
-  return prisma.$transaction(async (tx) => {
-    const seq = await tx.numberSequence.upsert({
-      where: { clinicId_key: { clinicId, key: "PATIENT" } },
-      create: {
-        clinicId,
-        key: "PATIENT",
-        prefix: "P",
-        currentValue: 1n,
-        padLength: 5,
-      },
-      update: { currentValue: { increment: 1 } },
-    });
-    const padded = String(seq.currentValue).padStart(
-      seq.padLength > 0 ? seq.padLength : 5,
-      "0",
-    );
-    return `${seq.prefix ?? ""}${padded}${seq.suffix ?? ""}`;
+async function nextMrn(
+  clinicId: string,
+  tx: Prisma.TransactionClient,
+): Promise<string> {
+  const seq = await tx.numberSequence.upsert({
+    where: { clinicId_key: { clinicId, key: "PATIENT" } },
+    create: {
+      clinicId,
+      key: "PATIENT",
+      prefix: "P",
+      currentValue: 1n,
+      padLength: 5,
+    },
+    update: { currentValue: { increment: 1 } },
   });
+  const padded = String(seq.currentValue).padStart(
+    seq.padLength > 0 ? seq.padLength : 5,
+    "0",
+  );
+  return `${seq.prefix ?? ""}${padded}${seq.suffix ?? ""}`;
 }
 
 function toData(values: PatientFormValues) {
@@ -175,16 +183,27 @@ export async function createPatient(
       return { ok: false, error: "possible-duplicate", candidates: duplicates };
     }
 
-    const mrn = await nextMrn(clinicId);
-    const patient = await prisma.patient.create({
-      data: {
-        clinicId,
-        mrn,
-        ...toData(parsed),
-        createdBy: user.id,
-        updatedBy: user.id,
-      },
-      select: { id: true },
+    const patient = await prisma.$transaction(async (tx) => {
+      const mrn = await nextMrn(clinicId, tx);
+      const created = await tx.patient.create({
+        data: {
+          clinicId,
+          mrn,
+          ...toData(parsed),
+          createdBy: user.id,
+          updatedBy: user.id,
+        },
+        select: { id: true },
+      });
+      if (options?.enqueue !== false) {
+        await enqueuePatient(tx, {
+          clinicId,
+          patientId: created.id,
+          mrn,
+          userId: user.id,
+        });
+      }
+      return { id: created.id, mrn };
     });
 
     recordAudit({
@@ -193,11 +212,13 @@ export async function createPatient(
       entity: "Patient",
       entityId: patient.id,
       clinicId,
-      metadata: { mrn, forcedDuplicate: Boolean(options?.confirmDuplicate) },
+      metadata: { mrn: patient.mrn, enqueued: options?.enqueue !== false },
     });
     revalidatePath("/patients");
+    revalidatePath("/queue");
+    revalidatePath("/reception");
     revalidatePath("/");
-    return { ok: true, id: patient.id, mrn };
+    return { ok: true, id: patient.id, mrn: patient.mrn };
   } catch (err) {
     const conflict = uniqueViolation(err);
     if (conflict) return { ok: false, error: conflict };

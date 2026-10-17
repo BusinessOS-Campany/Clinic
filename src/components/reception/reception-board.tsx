@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { ReceptionStatusActions } from "@/components/reception/reception-status-actions";
 import type { AppointmentStatusValue } from "@/app/[locale]/(app)/appointments/schema";
 
@@ -14,6 +15,7 @@ export type ReceptionItem = {
   doctorName: string | null;
   status: AppointmentStatusValue;
   time: string;
+  type: string;
 };
 
 const STATUS_BADGE: Record<string, "secondary" | "info" | "warning" | "default" | "success" | "destructive" | "outline"> = {
@@ -35,6 +37,9 @@ function Row({
   canWrite: boolean;
   ta: ReturnType<typeof useTranslations<"appointments">>;
 }) {
+  const t = useTranslations("reception");
+  const isReturn = item.type === "FOLLOW_UP";
+
   return (
     <div className="flex flex-wrap items-center gap-3 border-b px-3 py-2.5 text-sm last:border-b-0">
       <div className="min-w-40 flex-1">
@@ -47,6 +52,13 @@ function Row({
         <span className="ms-2 font-mono text-xs text-muted-foreground">
           {item.mrn}
         </span>
+        <span className="ms-2 inline-flex flex-wrap gap-1.5 align-middle">
+          {isReturn ? (
+            <Badge variant="info">{t("returnBadge")}</Badge>
+          ) : (
+            <Badge variant="success">{t("newPatient")}</Badge>
+          )}
+        </span>
       </div>
       <span className="font-mono text-xs text-muted-foreground" dir="ltr">
         {item.time}
@@ -58,6 +70,13 @@ function Row({
         {ta(`status_${item.status.toLowerCase()}`)}
       </Badge>
       <div className="ms-auto flex items-center gap-2">
+        {!isReturn && (
+          <Button asChild size="sm" variant="outline">
+            <Link href={`/patients/${item.patientId}/chart`}>
+              {t("openFile")}
+            </Link>
+          </Button>
+        )}
         {canWrite ? (
           <ReceptionStatusActions id={item.id} current={item.status} />
         ) : (
@@ -69,12 +88,14 @@ function Row({
 }
 
 export function ReceptionBoard({
+  returns,
   waiting,
   inService,
   completed,
   unattended,
   canWrite,
 }: {
+  returns: ReceptionItem[];
   waiting: ReceptionItem[];
   inService: ReceptionItem[];
   completed: ReceptionItem[];
@@ -114,6 +135,11 @@ export function ReceptionBoard({
 
   return (
     <div className="grid gap-6 lg:grid-cols-2">
+      <Section
+        title={t("sectionReturns")}
+        items={returns}
+        empty={t("emptyReturns")}
+      />
       <Section
         title={t("sectionWaiting")}
         items={waiting}

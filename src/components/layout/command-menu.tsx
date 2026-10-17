@@ -33,7 +33,11 @@ export function CommandMenu({
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     const flat = navGroups.flatMap((g) =>
-      g.items.map((i) => ({ ...i, group: g.key })),
+      g.items.flatMap((i) =>
+        i.href
+          ? [{ ...i, group: g.key }]
+          : (i.children ?? []).map((c) => ({ ...c, group: g.key })),
+      ),
     );
     if (!q) return flat;
     return flat.filter((i) => t(i.key).toLowerCase().includes(q));
@@ -63,7 +67,7 @@ export function CommandMenu({
             </p>
           )}
           {results.map((item) => {
-            const Icon = NAV_ICONS[item.iconKey];
+            const Icon = item.iconKey ? NAV_ICONS[item.iconKey] : undefined;
             return (
               <Link
                 key={item.key}
@@ -74,7 +78,11 @@ export function CommandMenu({
                 }}
                 className="flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground"
               >
-                <Icon className="size-4 shrink-0" aria-hidden />
+                {Icon ? (
+                  <Icon className="size-4 shrink-0" aria-hidden />
+                ) : (
+                  <span className="size-4 shrink-0" aria-hidden />
+                )}
                 <span>{t(item.key)}</span>
               </Link>
             );

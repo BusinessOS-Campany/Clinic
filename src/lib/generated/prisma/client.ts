@@ -421,3 +421,8 @@ export type VitalAlertRule = Prisma.VitalAlertRuleModel
  * 
  */
 export type VitalAlert = Prisma.VitalAlertModel
+/**
+ * Model Task
+ * 
+ */
+export type Task = Prisma.TaskModel

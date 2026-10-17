@@ -472,7 +472,8 @@ export const ModelName = {
   NotificationRetryPolicy: 'NotificationRetryPolicy',
   VitalSign: 'VitalSign',
   VitalAlertRule: 'VitalAlertRule',
-  VitalAlert: 'VitalAlert'
+  VitalAlert: 'VitalAlert',
+  Task: 'Task'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -488,7 +489,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "user" | "session" | "account" | "verification" | "role" | "permission" | "rolePermission" | "auditLog" | "systemSetting" | "clinic" | "branch" | "department" | "room" | "resource" | "resourceBooking" | "maintenanceSchedule" | "equipmentUsageHistory" | "branchPriceOverride" | "branchReport" | "numberSequence" | "service" | "patient" | "patientView" | "patientMergeRequest" | "appointment" | "encounter" | "visit" | "queue" | "queueEntry" | "encounterDiagnosis" | "medicalOrder" | "labTest" | "labRequest" | "labResult" | "imagingRequest" | "labSpecimen" | "labCriticalAlert" | "imagingReportApproval" | "dispensation" | "inventoryItem" | "inventoryMovement" | "invoice" | "invoiceItem" | "payment" | "medicalHistory" | "allergy" | "procedure" | "patientDocument" | "referral" | "consentForm" | "consentTemplate" | "consentRecord" | "digitalSignature" | "documentCategory" | "document" | "documentVersion" | "diagnosisCatalog" | "diagnosisAmendment" | "drugCatalog" | "drugInteraction" | "prescriptionAlert" | "medicationReconciliation" | "reconciliationItem" | "encounterSignature" | "encounterAmendment" | "clinicalTemplate" | "encounterTemplateUsage" | "notificationTemplate" | "notification" | "notificationDeliveryLog" | "notificationPreference" | "notificationConsent" | "notificationRetryPolicy" | "vitalSign" | "vitalAlertRule" | "vitalAlert"
+    modelProps: "user" | "session" | "account" | "verification" | "role" | "permission" | "rolePermission" | "auditLog" | "systemSetting" | "clinic" | "branch" | "department" | "room" | "resource" | "resourceBooking" | "maintenanceSchedule" | "equipmentUsageHistory" | "branchPriceOverride" | "branchReport" | "numberSequence" | "service" | "patient" | "patientView" | "patientMergeRequest" | "appointment" | "encounter" | "visit" | "queue" | "queueEntry" | "encounterDiagnosis" | "medicalOrder" | "labTest" | "labRequest" | "labResult" | "imagingRequest" | "labSpecimen" | "labCriticalAlert" | "imagingReportApproval" | "dispensation" | "inventoryItem" | "inventoryMovement" | "invoice" | "invoiceItem" | "payment" | "medicalHistory" | "allergy" | "procedure" | "patientDocument" | "referral" | "consentForm" | "consentTemplate" | "consentRecord" | "digitalSignature" | "documentCategory" | "document" | "documentVersion" | "diagnosisCatalog" | "diagnosisAmendment" | "drugCatalog" | "drugInteraction" | "prescriptionAlert" | "medicationReconciliation" | "reconciliationItem" | "encounterSignature" | "encounterAmendment" | "clinicalTemplate" | "encounterTemplateUsage" | "notificationTemplate" | "notification" | "notificationDeliveryLog" | "notificationPreference" | "notificationConsent" | "notificationRetryPolicy" | "vitalSign" | "vitalAlertRule" | "vitalAlert" | "task"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -6116,6 +6117,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    Task: {
+      payload: Prisma.$TaskPayload<ExtArgs>
+      fields: Prisma.TaskFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.TaskFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.TaskFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload>
+        }
+        findFirst: {
+          args: Prisma.TaskFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.TaskFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload>
+        }
+        findMany: {
+          args: Prisma.TaskFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload>[]
+        }
+        create: {
+          args: Prisma.TaskCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload>
+        }
+        createMany: {
+          args: Prisma.TaskCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.TaskCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload>[]
+        }
+        delete: {
+          args: Prisma.TaskDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload>
+        }
+        update: {
+          args: Prisma.TaskUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload>
+        }
+        deleteMany: {
+          args: Prisma.TaskDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.TaskUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.TaskUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload>[]
+        }
+        upsert: {
+          args: Prisma.TaskUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TaskPayload>
+        }
+        aggregate: {
+          args: Prisma.TaskAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateTask>
+        }
+        groupBy: {
+          args: Prisma.TaskGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.TaskGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.TaskCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.TaskCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -6612,6 +6687,11 @@ export const EncounterScalarFieldEnum = {
   physicalExamination: 'physicalExamination',
   assessment: 'assessment',
   plan: 'plan',
+  symptomsText: 'symptomsText',
+  diagnosisText: 'diagnosisText',
+  labsText: 'labsText',
+  imagingText: 'imagingText',
+  treatmentsText: 'treatmentsText',
   painLocation: 'painLocation',
   symptomNature: 'symptomNature',
   aggravatingFactors: 'aggravatingFactors',
@@ -7678,6 +7758,24 @@ export const VitalAlertScalarFieldEnum = {
 } as const
 
 export type VitalAlertScalarFieldEnum = (typeof VitalAlertScalarFieldEnum)[keyof typeof VitalAlertScalarFieldEnum]
+
+
+export const TaskScalarFieldEnum = {
+  id: 'id',
+  clinicId: 'clinicId',
+  title: 'title',
+  description: 'description',
+  status: 'status',
+  priority: 'priority',
+  dueDate: 'dueDate',
+  completedAt: 'completedAt',
+  createdById: 'createdById',
+  assignedToId: 'assignedToId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type TaskScalarFieldEnum = (typeof TaskScalarFieldEnum)[keyof typeof TaskScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -8832,6 +8930,34 @@ export type EnumVitalAlertSeverityFieldRefInput<$PrismaModel> = FieldRefInputTyp
 export type ListEnumVitalAlertSeverityFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'VitalAlertSeverity[]'>
     
 
+
+/**
+ * Reference to a field of type 'TaskStatus'
+ */
+export type EnumTaskStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'TaskStatus'>
+    
+
+
+/**
+ * Reference to a field of type 'TaskStatus[]'
+ */
+export type ListEnumTaskStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'TaskStatus[]'>
+    
+
+
+/**
+ * Reference to a field of type 'TaskPriority'
+ */
+export type EnumTaskPriorityFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'TaskPriority'>
+    
+
+
+/**
+ * Reference to a field of type 'TaskPriority[]'
+ */
+export type ListEnumTaskPriorityFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'TaskPriority[]'>
+    
+
 /**
  * Batch Payload for updateMany & deleteMany & createMany
  */
@@ -9059,6 +9185,7 @@ export type GlobalOmitConfig = {
   vitalSign?: Prisma.VitalSignOmit
   vitalAlertRule?: Prisma.VitalAlertRuleOmit
   vitalAlert?: Prisma.VitalAlertOmit
+  task?: Prisma.TaskOmit
 }
 
 /* Types for Logging */

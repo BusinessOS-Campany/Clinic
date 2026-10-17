@@ -287,6 +287,7 @@ export type ClinicWhereInput = {
   visits?: Prisma.VisitListRelationFilter
   queues?: Prisma.QueueListRelationFilter
   queueEntries?: Prisma.QueueEntryListRelationFilter
+  tasks?: Prisma.TaskListRelationFilter
 }
 
 export type ClinicOrderByWithRelationInput = {
@@ -330,6 +331,7 @@ export type ClinicOrderByWithRelationInput = {
   visits?: Prisma.VisitOrderByRelationAggregateInput
   queues?: Prisma.QueueOrderByRelationAggregateInput
   queueEntries?: Prisma.QueueEntryOrderByRelationAggregateInput
+  tasks?: Prisma.TaskOrderByRelationAggregateInput
 }
 
 export type ClinicWhereUniqueInput = Prisma.AtLeast<{
@@ -376,6 +378,7 @@ export type ClinicWhereUniqueInput = Prisma.AtLeast<{
   visits?: Prisma.VisitListRelationFilter
   queues?: Prisma.QueueListRelationFilter
   queueEntries?: Prisma.QueueEntryListRelationFilter
+  tasks?: Prisma.TaskListRelationFilter
 }, "id" | "code">
 
 export type ClinicOrderByWithAggregationInput = {
@@ -461,6 +464,7 @@ export type ClinicCreateInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateInput = {
@@ -504,6 +508,7 @@ export type ClinicUncheckedCreateInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUpdateInput = {
@@ -547,6 +552,7 @@ export type ClinicUpdateInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateInput = {
@@ -590,6 +596,7 @@ export type ClinicUncheckedUpdateInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateManyInput = {
@@ -1055,6 +1062,20 @@ export type ClinicUpdateOneRequiredWithoutDocumentVersionsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.ClinicUpdateToOneWithWhereWithoutDocumentVersionsInput, Prisma.ClinicUpdateWithoutDocumentVersionsInput>, Prisma.ClinicUncheckedUpdateWithoutDocumentVersionsInput>
 }
 
+export type ClinicCreateNestedOneWithoutTasksInput = {
+  create?: Prisma.XOR<Prisma.ClinicCreateWithoutTasksInput, Prisma.ClinicUncheckedCreateWithoutTasksInput>
+  connectOrCreate?: Prisma.ClinicCreateOrConnectWithoutTasksInput
+  connect?: Prisma.ClinicWhereUniqueInput
+}
+
+export type ClinicUpdateOneRequiredWithoutTasksNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicCreateWithoutTasksInput, Prisma.ClinicUncheckedCreateWithoutTasksInput>
+  connectOrCreate?: Prisma.ClinicCreateOrConnectWithoutTasksInput
+  upsert?: Prisma.ClinicUpsertWithoutTasksInput
+  connect?: Prisma.ClinicWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.ClinicUpdateToOneWithWhereWithoutTasksInput, Prisma.ClinicUpdateWithoutTasksInput>, Prisma.ClinicUncheckedUpdateWithoutTasksInput>
+}
+
 export type ClinicCreateWithoutBranchesInput = {
   id?: string
   code: string
@@ -1095,6 +1116,7 @@ export type ClinicCreateWithoutBranchesInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutBranchesInput = {
@@ -1137,6 +1159,7 @@ export type ClinicUncheckedCreateWithoutBranchesInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutBranchesInput = {
@@ -1195,6 +1218,7 @@ export type ClinicUpdateWithoutBranchesInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutBranchesInput = {
@@ -1237,6 +1261,7 @@ export type ClinicUncheckedUpdateWithoutBranchesInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutDepartmentsInput = {
@@ -1279,6 +1304,7 @@ export type ClinicCreateWithoutDepartmentsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutDepartmentsInput = {
@@ -1321,6 +1347,7 @@ export type ClinicUncheckedCreateWithoutDepartmentsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutDepartmentsInput = {
@@ -1379,6 +1406,7 @@ export type ClinicUpdateWithoutDepartmentsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutDepartmentsInput = {
@@ -1421,6 +1449,7 @@ export type ClinicUncheckedUpdateWithoutDepartmentsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutRoomsInput = {
@@ -1463,6 +1492,7 @@ export type ClinicCreateWithoutRoomsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutRoomsInput = {
@@ -1505,6 +1535,7 @@ export type ClinicUncheckedCreateWithoutRoomsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutRoomsInput = {
@@ -1563,6 +1594,7 @@ export type ClinicUpdateWithoutRoomsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutRoomsInput = {
@@ -1605,6 +1637,7 @@ export type ClinicUncheckedUpdateWithoutRoomsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutResourcesInput = {
@@ -1647,6 +1680,7 @@ export type ClinicCreateWithoutResourcesInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutResourcesInput = {
@@ -1689,6 +1723,7 @@ export type ClinicUncheckedCreateWithoutResourcesInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutResourcesInput = {
@@ -1747,6 +1782,7 @@ export type ClinicUpdateWithoutResourcesInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutResourcesInput = {
@@ -1789,6 +1825,7 @@ export type ClinicUncheckedUpdateWithoutResourcesInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutResourceBookingsInput = {
@@ -1831,6 +1868,7 @@ export type ClinicCreateWithoutResourceBookingsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutResourceBookingsInput = {
@@ -1873,6 +1911,7 @@ export type ClinicUncheckedCreateWithoutResourceBookingsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutResourceBookingsInput = {
@@ -1931,6 +1970,7 @@ export type ClinicUpdateWithoutResourceBookingsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutResourceBookingsInput = {
@@ -1973,6 +2013,7 @@ export type ClinicUncheckedUpdateWithoutResourceBookingsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutMaintenanceSchedulesInput = {
@@ -2015,6 +2056,7 @@ export type ClinicCreateWithoutMaintenanceSchedulesInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutMaintenanceSchedulesInput = {
@@ -2057,6 +2099,7 @@ export type ClinicUncheckedCreateWithoutMaintenanceSchedulesInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutMaintenanceSchedulesInput = {
@@ -2115,6 +2158,7 @@ export type ClinicUpdateWithoutMaintenanceSchedulesInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutMaintenanceSchedulesInput = {
@@ -2157,6 +2201,7 @@ export type ClinicUncheckedUpdateWithoutMaintenanceSchedulesInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutEquipmentUsageInput = {
@@ -2199,6 +2244,7 @@ export type ClinicCreateWithoutEquipmentUsageInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutEquipmentUsageInput = {
@@ -2241,6 +2287,7 @@ export type ClinicUncheckedCreateWithoutEquipmentUsageInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutEquipmentUsageInput = {
@@ -2299,6 +2346,7 @@ export type ClinicUpdateWithoutEquipmentUsageInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutEquipmentUsageInput = {
@@ -2341,6 +2389,7 @@ export type ClinicUncheckedUpdateWithoutEquipmentUsageInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutBranchPriceOverridesInput = {
@@ -2383,6 +2432,7 @@ export type ClinicCreateWithoutBranchPriceOverridesInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutBranchPriceOverridesInput = {
@@ -2425,6 +2475,7 @@ export type ClinicUncheckedCreateWithoutBranchPriceOverridesInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutBranchPriceOverridesInput = {
@@ -2483,6 +2534,7 @@ export type ClinicUpdateWithoutBranchPriceOverridesInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutBranchPriceOverridesInput = {
@@ -2525,6 +2577,7 @@ export type ClinicUncheckedUpdateWithoutBranchPriceOverridesInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutBranchReportsInput = {
@@ -2567,6 +2620,7 @@ export type ClinicCreateWithoutBranchReportsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutBranchReportsInput = {
@@ -2609,6 +2663,7 @@ export type ClinicUncheckedCreateWithoutBranchReportsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutBranchReportsInput = {
@@ -2667,6 +2722,7 @@ export type ClinicUpdateWithoutBranchReportsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutBranchReportsInput = {
@@ -2709,6 +2765,7 @@ export type ClinicUncheckedUpdateWithoutBranchReportsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutSequencesInput = {
@@ -2751,6 +2808,7 @@ export type ClinicCreateWithoutSequencesInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutSequencesInput = {
@@ -2793,6 +2851,7 @@ export type ClinicUncheckedCreateWithoutSequencesInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutSequencesInput = {
@@ -2851,6 +2910,7 @@ export type ClinicUpdateWithoutSequencesInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutSequencesInput = {
@@ -2893,6 +2953,7 @@ export type ClinicUncheckedUpdateWithoutSequencesInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutServicesInput = {
@@ -2935,6 +2996,7 @@ export type ClinicCreateWithoutServicesInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutServicesInput = {
@@ -2977,6 +3039,7 @@ export type ClinicUncheckedCreateWithoutServicesInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutServicesInput = {
@@ -3035,6 +3098,7 @@ export type ClinicUpdateWithoutServicesInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutServicesInput = {
@@ -3077,6 +3141,7 @@ export type ClinicUncheckedUpdateWithoutServicesInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutPatientsInput = {
@@ -3119,6 +3184,7 @@ export type ClinicCreateWithoutPatientsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutPatientsInput = {
@@ -3161,6 +3227,7 @@ export type ClinicUncheckedCreateWithoutPatientsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutPatientsInput = {
@@ -3219,6 +3286,7 @@ export type ClinicUpdateWithoutPatientsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutPatientsInput = {
@@ -3261,6 +3329,7 @@ export type ClinicUncheckedUpdateWithoutPatientsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutPatientViewsInput = {
@@ -3303,6 +3372,7 @@ export type ClinicCreateWithoutPatientViewsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutPatientViewsInput = {
@@ -3345,6 +3415,7 @@ export type ClinicUncheckedCreateWithoutPatientViewsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutPatientViewsInput = {
@@ -3403,6 +3474,7 @@ export type ClinicUpdateWithoutPatientViewsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutPatientViewsInput = {
@@ -3445,6 +3517,7 @@ export type ClinicUncheckedUpdateWithoutPatientViewsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutMergeRequestsInput = {
@@ -3487,6 +3560,7 @@ export type ClinicCreateWithoutMergeRequestsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutMergeRequestsInput = {
@@ -3529,6 +3603,7 @@ export type ClinicUncheckedCreateWithoutMergeRequestsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutMergeRequestsInput = {
@@ -3587,6 +3662,7 @@ export type ClinicUpdateWithoutMergeRequestsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutMergeRequestsInput = {
@@ -3629,6 +3705,7 @@ export type ClinicUncheckedUpdateWithoutMergeRequestsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutAppointmentsInput = {
@@ -3671,6 +3748,7 @@ export type ClinicCreateWithoutAppointmentsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutAppointmentsInput = {
@@ -3713,6 +3791,7 @@ export type ClinicUncheckedCreateWithoutAppointmentsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutAppointmentsInput = {
@@ -3771,6 +3850,7 @@ export type ClinicUpdateWithoutAppointmentsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutAppointmentsInput = {
@@ -3813,6 +3893,7 @@ export type ClinicUncheckedUpdateWithoutAppointmentsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutEncountersInput = {
@@ -3855,6 +3936,7 @@ export type ClinicCreateWithoutEncountersInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutEncountersInput = {
@@ -3897,6 +3979,7 @@ export type ClinicUncheckedCreateWithoutEncountersInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutEncountersInput = {
@@ -3955,6 +4038,7 @@ export type ClinicUpdateWithoutEncountersInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutEncountersInput = {
@@ -3997,6 +4081,7 @@ export type ClinicUncheckedUpdateWithoutEncountersInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutVisitsInput = {
@@ -4039,6 +4124,7 @@ export type ClinicCreateWithoutVisitsInput = {
   documentVersions?: Prisma.DocumentVersionCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutVisitsInput = {
@@ -4081,6 +4167,7 @@ export type ClinicUncheckedCreateWithoutVisitsInput = {
   documentVersions?: Prisma.DocumentVersionUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutVisitsInput = {
@@ -4139,6 +4226,7 @@ export type ClinicUpdateWithoutVisitsInput = {
   documentVersions?: Prisma.DocumentVersionUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutVisitsInput = {
@@ -4181,6 +4269,7 @@ export type ClinicUncheckedUpdateWithoutVisitsInput = {
   documentVersions?: Prisma.DocumentVersionUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutQueuesInput = {
@@ -4223,6 +4312,7 @@ export type ClinicCreateWithoutQueuesInput = {
   documentVersions?: Prisma.DocumentVersionCreateNestedManyWithoutClinicInput
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutQueuesInput = {
@@ -4265,6 +4355,7 @@ export type ClinicUncheckedCreateWithoutQueuesInput = {
   documentVersions?: Prisma.DocumentVersionUncheckedCreateNestedManyWithoutClinicInput
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutQueuesInput = {
@@ -4323,6 +4414,7 @@ export type ClinicUpdateWithoutQueuesInput = {
   documentVersions?: Prisma.DocumentVersionUpdateManyWithoutClinicNestedInput
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutQueuesInput = {
@@ -4365,6 +4457,7 @@ export type ClinicUncheckedUpdateWithoutQueuesInput = {
   documentVersions?: Prisma.DocumentVersionUncheckedUpdateManyWithoutClinicNestedInput
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutQueueEntriesInput = {
@@ -4407,6 +4500,7 @@ export type ClinicCreateWithoutQueueEntriesInput = {
   documentVersions?: Prisma.DocumentVersionCreateNestedManyWithoutClinicInput
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutQueueEntriesInput = {
@@ -4449,6 +4543,7 @@ export type ClinicUncheckedCreateWithoutQueueEntriesInput = {
   documentVersions?: Prisma.DocumentVersionUncheckedCreateNestedManyWithoutClinicInput
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutQueueEntriesInput = {
@@ -4507,6 +4602,7 @@ export type ClinicUpdateWithoutQueueEntriesInput = {
   documentVersions?: Prisma.DocumentVersionUpdateManyWithoutClinicNestedInput
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutQueueEntriesInput = {
@@ -4549,6 +4645,7 @@ export type ClinicUncheckedUpdateWithoutQueueEntriesInput = {
   documentVersions?: Prisma.DocumentVersionUncheckedUpdateManyWithoutClinicNestedInput
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutConsentTemplatesInput = {
@@ -4591,6 +4688,7 @@ export type ClinicCreateWithoutConsentTemplatesInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutConsentTemplatesInput = {
@@ -4633,6 +4731,7 @@ export type ClinicUncheckedCreateWithoutConsentTemplatesInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutConsentTemplatesInput = {
@@ -4691,6 +4790,7 @@ export type ClinicUpdateWithoutConsentTemplatesInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutConsentTemplatesInput = {
@@ -4733,6 +4833,7 @@ export type ClinicUncheckedUpdateWithoutConsentTemplatesInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutConsentRecordsInput = {
@@ -4775,6 +4876,7 @@ export type ClinicCreateWithoutConsentRecordsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutConsentRecordsInput = {
@@ -4817,6 +4919,7 @@ export type ClinicUncheckedCreateWithoutConsentRecordsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutConsentRecordsInput = {
@@ -4875,6 +4978,7 @@ export type ClinicUpdateWithoutConsentRecordsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutConsentRecordsInput = {
@@ -4917,6 +5021,7 @@ export type ClinicUncheckedUpdateWithoutConsentRecordsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutDigitalSignaturesInput = {
@@ -4959,6 +5064,7 @@ export type ClinicCreateWithoutDigitalSignaturesInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutDigitalSignaturesInput = {
@@ -5001,6 +5107,7 @@ export type ClinicUncheckedCreateWithoutDigitalSignaturesInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutDigitalSignaturesInput = {
@@ -5059,6 +5166,7 @@ export type ClinicUpdateWithoutDigitalSignaturesInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutDigitalSignaturesInput = {
@@ -5101,6 +5209,7 @@ export type ClinicUncheckedUpdateWithoutDigitalSignaturesInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutDocumentCategoriesInput = {
@@ -5143,6 +5252,7 @@ export type ClinicCreateWithoutDocumentCategoriesInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutDocumentCategoriesInput = {
@@ -5185,6 +5295,7 @@ export type ClinicUncheckedCreateWithoutDocumentCategoriesInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutDocumentCategoriesInput = {
@@ -5243,6 +5354,7 @@ export type ClinicUpdateWithoutDocumentCategoriesInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutDocumentCategoriesInput = {
@@ -5285,6 +5397,7 @@ export type ClinicUncheckedUpdateWithoutDocumentCategoriesInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutDocumentsInput = {
@@ -5327,6 +5440,7 @@ export type ClinicCreateWithoutDocumentsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutDocumentsInput = {
@@ -5369,6 +5483,7 @@ export type ClinicUncheckedCreateWithoutDocumentsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutDocumentsInput = {
@@ -5427,6 +5542,7 @@ export type ClinicUpdateWithoutDocumentsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutDocumentsInput = {
@@ -5469,6 +5585,7 @@ export type ClinicUncheckedUpdateWithoutDocumentsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicCreateWithoutDocumentVersionsInput = {
@@ -5511,6 +5628,7 @@ export type ClinicCreateWithoutDocumentVersionsInput = {
   visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicUncheckedCreateWithoutDocumentVersionsInput = {
@@ -5553,6 +5671,7 @@ export type ClinicUncheckedCreateWithoutDocumentVersionsInput = {
   visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
   queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
   queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutClinicInput
 }
 
 export type ClinicCreateOrConnectWithoutDocumentVersionsInput = {
@@ -5611,6 +5730,7 @@ export type ClinicUpdateWithoutDocumentVersionsInput = {
   visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUpdateManyWithoutClinicNestedInput
 }
 
 export type ClinicUncheckedUpdateWithoutDocumentVersionsInput = {
@@ -5653,6 +5773,195 @@ export type ClinicUncheckedUpdateWithoutDocumentVersionsInput = {
   visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
   queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
   queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
+  tasks?: Prisma.TaskUncheckedUpdateManyWithoutClinicNestedInput
+}
+
+export type ClinicCreateWithoutTasksInput = {
+  id?: string
+  code: string
+  nameAr: string
+  nameEn: string
+  phone?: string | null
+  email?: string | null
+  address?: string | null
+  currency?: string
+  timezone?: string
+  locale?: string
+  dateFormat?: string
+  logoUrl?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  branches?: Prisma.BranchCreateNestedManyWithoutClinicInput
+  departments?: Prisma.DepartmentCreateNestedManyWithoutClinicInput
+  rooms?: Prisma.RoomCreateNestedManyWithoutClinicInput
+  resources?: Prisma.ResourceCreateNestedManyWithoutClinicInput
+  sequences?: Prisma.NumberSequenceCreateNestedManyWithoutClinicInput
+  patients?: Prisma.PatientCreateNestedManyWithoutClinicInput
+  patientViews?: Prisma.PatientViewCreateNestedManyWithoutClinicInput
+  mergeRequests?: Prisma.PatientMergeRequestCreateNestedManyWithoutClinicInput
+  appointments?: Prisma.AppointmentCreateNestedManyWithoutClinicInput
+  encounters?: Prisma.EncounterCreateNestedManyWithoutClinicInput
+  services?: Prisma.ServiceCreateNestedManyWithoutClinicInput
+  branchPriceOverrides?: Prisma.BranchPriceOverrideCreateNestedManyWithoutClinicInput
+  branchReports?: Prisma.BranchReportCreateNestedManyWithoutClinicInput
+  maintenanceSchedules?: Prisma.MaintenanceScheduleCreateNestedManyWithoutClinicInput
+  equipmentUsage?: Prisma.EquipmentUsageHistoryCreateNestedManyWithoutClinicInput
+  resourceBookings?: Prisma.ResourceBookingCreateNestedManyWithoutClinicInput
+  consentTemplates?: Prisma.ConsentTemplateCreateNestedManyWithoutClinicInput
+  consentRecords?: Prisma.ConsentRecordCreateNestedManyWithoutClinicInput
+  digitalSignatures?: Prisma.DigitalSignatureCreateNestedManyWithoutClinicInput
+  documentCategories?: Prisma.DocumentCategoryCreateNestedManyWithoutClinicInput
+  documents?: Prisma.DocumentCreateNestedManyWithoutClinicInput
+  documentVersions?: Prisma.DocumentVersionCreateNestedManyWithoutClinicInput
+  visits?: Prisma.VisitCreateNestedManyWithoutClinicInput
+  queues?: Prisma.QueueCreateNestedManyWithoutClinicInput
+  queueEntries?: Prisma.QueueEntryCreateNestedManyWithoutClinicInput
+}
+
+export type ClinicUncheckedCreateWithoutTasksInput = {
+  id?: string
+  code: string
+  nameAr: string
+  nameEn: string
+  phone?: string | null
+  email?: string | null
+  address?: string | null
+  currency?: string
+  timezone?: string
+  locale?: string
+  dateFormat?: string
+  logoUrl?: string | null
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  branches?: Prisma.BranchUncheckedCreateNestedManyWithoutClinicInput
+  departments?: Prisma.DepartmentUncheckedCreateNestedManyWithoutClinicInput
+  rooms?: Prisma.RoomUncheckedCreateNestedManyWithoutClinicInput
+  resources?: Prisma.ResourceUncheckedCreateNestedManyWithoutClinicInput
+  sequences?: Prisma.NumberSequenceUncheckedCreateNestedManyWithoutClinicInput
+  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutClinicInput
+  patientViews?: Prisma.PatientViewUncheckedCreateNestedManyWithoutClinicInput
+  mergeRequests?: Prisma.PatientMergeRequestUncheckedCreateNestedManyWithoutClinicInput
+  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutClinicInput
+  encounters?: Prisma.EncounterUncheckedCreateNestedManyWithoutClinicInput
+  services?: Prisma.ServiceUncheckedCreateNestedManyWithoutClinicInput
+  branchPriceOverrides?: Prisma.BranchPriceOverrideUncheckedCreateNestedManyWithoutClinicInput
+  branchReports?: Prisma.BranchReportUncheckedCreateNestedManyWithoutClinicInput
+  maintenanceSchedules?: Prisma.MaintenanceScheduleUncheckedCreateNestedManyWithoutClinicInput
+  equipmentUsage?: Prisma.EquipmentUsageHistoryUncheckedCreateNestedManyWithoutClinicInput
+  resourceBookings?: Prisma.ResourceBookingUncheckedCreateNestedManyWithoutClinicInput
+  consentTemplates?: Prisma.ConsentTemplateUncheckedCreateNestedManyWithoutClinicInput
+  consentRecords?: Prisma.ConsentRecordUncheckedCreateNestedManyWithoutClinicInput
+  digitalSignatures?: Prisma.DigitalSignatureUncheckedCreateNestedManyWithoutClinicInput
+  documentCategories?: Prisma.DocumentCategoryUncheckedCreateNestedManyWithoutClinicInput
+  documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutClinicInput
+  documentVersions?: Prisma.DocumentVersionUncheckedCreateNestedManyWithoutClinicInput
+  visits?: Prisma.VisitUncheckedCreateNestedManyWithoutClinicInput
+  queues?: Prisma.QueueUncheckedCreateNestedManyWithoutClinicInput
+  queueEntries?: Prisma.QueueEntryUncheckedCreateNestedManyWithoutClinicInput
+}
+
+export type ClinicCreateOrConnectWithoutTasksInput = {
+  where: Prisma.ClinicWhereUniqueInput
+  create: Prisma.XOR<Prisma.ClinicCreateWithoutTasksInput, Prisma.ClinicUncheckedCreateWithoutTasksInput>
+}
+
+export type ClinicUpsertWithoutTasksInput = {
+  update: Prisma.XOR<Prisma.ClinicUpdateWithoutTasksInput, Prisma.ClinicUncheckedUpdateWithoutTasksInput>
+  create: Prisma.XOR<Prisma.ClinicCreateWithoutTasksInput, Prisma.ClinicUncheckedCreateWithoutTasksInput>
+  where?: Prisma.ClinicWhereInput
+}
+
+export type ClinicUpdateToOneWithWhereWithoutTasksInput = {
+  where?: Prisma.ClinicWhereInput
+  data: Prisma.XOR<Prisma.ClinicUpdateWithoutTasksInput, Prisma.ClinicUncheckedUpdateWithoutTasksInput>
+}
+
+export type ClinicUpdateWithoutTasksInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  code?: Prisma.StringFieldUpdateOperationsInput | string
+  nameAr?: Prisma.StringFieldUpdateOperationsInput | string
+  nameEn?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currency?: Prisma.StringFieldUpdateOperationsInput | string
+  timezone?: Prisma.StringFieldUpdateOperationsInput | string
+  locale?: Prisma.StringFieldUpdateOperationsInput | string
+  dateFormat?: Prisma.StringFieldUpdateOperationsInput | string
+  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  branches?: Prisma.BranchUpdateManyWithoutClinicNestedInput
+  departments?: Prisma.DepartmentUpdateManyWithoutClinicNestedInput
+  rooms?: Prisma.RoomUpdateManyWithoutClinicNestedInput
+  resources?: Prisma.ResourceUpdateManyWithoutClinicNestedInput
+  sequences?: Prisma.NumberSequenceUpdateManyWithoutClinicNestedInput
+  patients?: Prisma.PatientUpdateManyWithoutClinicNestedInput
+  patientViews?: Prisma.PatientViewUpdateManyWithoutClinicNestedInput
+  mergeRequests?: Prisma.PatientMergeRequestUpdateManyWithoutClinicNestedInput
+  appointments?: Prisma.AppointmentUpdateManyWithoutClinicNestedInput
+  encounters?: Prisma.EncounterUpdateManyWithoutClinicNestedInput
+  services?: Prisma.ServiceUpdateManyWithoutClinicNestedInput
+  branchPriceOverrides?: Prisma.BranchPriceOverrideUpdateManyWithoutClinicNestedInput
+  branchReports?: Prisma.BranchReportUpdateManyWithoutClinicNestedInput
+  maintenanceSchedules?: Prisma.MaintenanceScheduleUpdateManyWithoutClinicNestedInput
+  equipmentUsage?: Prisma.EquipmentUsageHistoryUpdateManyWithoutClinicNestedInput
+  resourceBookings?: Prisma.ResourceBookingUpdateManyWithoutClinicNestedInput
+  consentTemplates?: Prisma.ConsentTemplateUpdateManyWithoutClinicNestedInput
+  consentRecords?: Prisma.ConsentRecordUpdateManyWithoutClinicNestedInput
+  digitalSignatures?: Prisma.DigitalSignatureUpdateManyWithoutClinicNestedInput
+  documentCategories?: Prisma.DocumentCategoryUpdateManyWithoutClinicNestedInput
+  documents?: Prisma.DocumentUpdateManyWithoutClinicNestedInput
+  documentVersions?: Prisma.DocumentVersionUpdateManyWithoutClinicNestedInput
+  visits?: Prisma.VisitUpdateManyWithoutClinicNestedInput
+  queues?: Prisma.QueueUpdateManyWithoutClinicNestedInput
+  queueEntries?: Prisma.QueueEntryUpdateManyWithoutClinicNestedInput
+}
+
+export type ClinicUncheckedUpdateWithoutTasksInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  code?: Prisma.StringFieldUpdateOperationsInput | string
+  nameAr?: Prisma.StringFieldUpdateOperationsInput | string
+  nameEn?: Prisma.StringFieldUpdateOperationsInput | string
+  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  currency?: Prisma.StringFieldUpdateOperationsInput | string
+  timezone?: Prisma.StringFieldUpdateOperationsInput | string
+  locale?: Prisma.StringFieldUpdateOperationsInput | string
+  dateFormat?: Prisma.StringFieldUpdateOperationsInput | string
+  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  branches?: Prisma.BranchUncheckedUpdateManyWithoutClinicNestedInput
+  departments?: Prisma.DepartmentUncheckedUpdateManyWithoutClinicNestedInput
+  rooms?: Prisma.RoomUncheckedUpdateManyWithoutClinicNestedInput
+  resources?: Prisma.ResourceUncheckedUpdateManyWithoutClinicNestedInput
+  sequences?: Prisma.NumberSequenceUncheckedUpdateManyWithoutClinicNestedInput
+  patients?: Prisma.PatientUncheckedUpdateManyWithoutClinicNestedInput
+  patientViews?: Prisma.PatientViewUncheckedUpdateManyWithoutClinicNestedInput
+  mergeRequests?: Prisma.PatientMergeRequestUncheckedUpdateManyWithoutClinicNestedInput
+  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutClinicNestedInput
+  encounters?: Prisma.EncounterUncheckedUpdateManyWithoutClinicNestedInput
+  services?: Prisma.ServiceUncheckedUpdateManyWithoutClinicNestedInput
+  branchPriceOverrides?: Prisma.BranchPriceOverrideUncheckedUpdateManyWithoutClinicNestedInput
+  branchReports?: Prisma.BranchReportUncheckedUpdateManyWithoutClinicNestedInput
+  maintenanceSchedules?: Prisma.MaintenanceScheduleUncheckedUpdateManyWithoutClinicNestedInput
+  equipmentUsage?: Prisma.EquipmentUsageHistoryUncheckedUpdateManyWithoutClinicNestedInput
+  resourceBookings?: Prisma.ResourceBookingUncheckedUpdateManyWithoutClinicNestedInput
+  consentTemplates?: Prisma.ConsentTemplateUncheckedUpdateManyWithoutClinicNestedInput
+  consentRecords?: Prisma.ConsentRecordUncheckedUpdateManyWithoutClinicNestedInput
+  digitalSignatures?: Prisma.DigitalSignatureUncheckedUpdateManyWithoutClinicNestedInput
+  documentCategories?: Prisma.DocumentCategoryUncheckedUpdateManyWithoutClinicNestedInput
+  documents?: Prisma.DocumentUncheckedUpdateManyWithoutClinicNestedInput
+  documentVersions?: Prisma.DocumentVersionUncheckedUpdateManyWithoutClinicNestedInput
+  visits?: Prisma.VisitUncheckedUpdateManyWithoutClinicNestedInput
+  queues?: Prisma.QueueUncheckedUpdateManyWithoutClinicNestedInput
+  queueEntries?: Prisma.QueueEntryUncheckedUpdateManyWithoutClinicNestedInput
 }
 
 
@@ -5686,6 +5995,7 @@ export type ClinicCountOutputType = {
   visits: number
   queues: number
   queueEntries: number
+  tasks: number
 }
 
 export type ClinicCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -5714,6 +6024,7 @@ export type ClinicCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions
   visits?: boolean | ClinicCountOutputTypeCountVisitsArgs
   queues?: boolean | ClinicCountOutputTypeCountQueuesArgs
   queueEntries?: boolean | ClinicCountOutputTypeCountQueueEntriesArgs
+  tasks?: boolean | ClinicCountOutputTypeCountTasksArgs
 }
 
 /**
@@ -5901,6 +6212,13 @@ export type ClinicCountOutputTypeCountQueueEntriesArgs<ExtArgs extends runtime.T
   where?: Prisma.QueueEntryWhereInput
 }
 
+/**
+ * ClinicCountOutputType without action
+ */
+export type ClinicCountOutputTypeCountTasksArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.TaskWhereInput
+}
+
 
 export type ClinicSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -5943,6 +6261,7 @@ export type ClinicSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   visits?: boolean | Prisma.Clinic$visitsArgs<ExtArgs>
   queues?: boolean | Prisma.Clinic$queuesArgs<ExtArgs>
   queueEntries?: boolean | Prisma.Clinic$queueEntriesArgs<ExtArgs>
+  tasks?: boolean | Prisma.Clinic$tasksArgs<ExtArgs>
   _count?: boolean | Prisma.ClinicCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["clinic"]>
 
@@ -6027,6 +6346,7 @@ export type ClinicInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   visits?: boolean | Prisma.Clinic$visitsArgs<ExtArgs>
   queues?: boolean | Prisma.Clinic$queuesArgs<ExtArgs>
   queueEntries?: boolean | Prisma.Clinic$queueEntriesArgs<ExtArgs>
+  tasks?: boolean | Prisma.Clinic$tasksArgs<ExtArgs>
   _count?: boolean | Prisma.ClinicCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type ClinicIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -6060,6 +6380,7 @@ export type $ClinicPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
     visits: Prisma.$VisitPayload<ExtArgs>[]
     queues: Prisma.$QueuePayload<ExtArgs>[]
     queueEntries: Prisma.$QueueEntryPayload<ExtArgs>[]
+    tasks: Prisma.$TaskPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -6496,6 +6817,7 @@ export interface Prisma__ClinicClient<T, Null = never, ExtArgs extends runtime.T
   visits<T extends Prisma.Clinic$visitsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Clinic$visitsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VisitPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   queues<T extends Prisma.Clinic$queuesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Clinic$queuesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$QueuePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   queueEntries<T extends Prisma.Clinic$queueEntriesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Clinic$queueEntriesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$QueueEntryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  tasks<T extends Prisma.Clinic$tasksArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Clinic$tasksArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TaskPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -7530,6 +7852,30 @@ export type Clinic$queueEntriesArgs<ExtArgs extends runtime.Types.Extensions.Int
   take?: number
   skip?: number
   distinct?: Prisma.QueueEntryScalarFieldEnum | Prisma.QueueEntryScalarFieldEnum[]
+}
+
+/**
+ * Clinic.tasks
+ */
+export type Clinic$tasksArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Task
+   */
+  select?: Prisma.TaskSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Task
+   */
+  omit?: Prisma.TaskOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.TaskInclude<ExtArgs> | null
+  where?: Prisma.TaskWhereInput
+  orderBy?: Prisma.TaskOrderByWithRelationInput | Prisma.TaskOrderByWithRelationInput[]
+  cursor?: Prisma.TaskWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.TaskScalarFieldEnum | Prisma.TaskScalarFieldEnum[]
 }
 
 /**

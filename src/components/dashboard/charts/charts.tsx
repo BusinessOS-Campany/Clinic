@@ -25,6 +25,7 @@ import {
   paletteAt,
   useChartMotion,
 } from "./chart-kit";
+import { fmtInt } from "@/lib/format";
 
 export type Point = { label: string; value: number };
 export type Slice = { key: string; label: string; value: number };
@@ -54,7 +55,7 @@ export function RevenueAreaChart({ data, emptyLabel }: { data: Point[]; emptyLab
           <YAxis tick={AXIS} stroke="var(--border)" tickLine={false} axisLine={false} width={46} />
           <Tooltip
             cursor={{ stroke: "var(--primary)", strokeOpacity: 0.35 }}
-            content={<ChartTooltip format={(v) => v.toLocaleString()} />}
+            content={<ChartTooltip format={fmtInt} />}
           />
           <Area
             type="monotone"
@@ -90,7 +91,7 @@ export function WeeklyBarsChart({ data, emptyLabel }: { data: Point[]; emptyLabe
           <YAxis allowDecimals={false} tick={AXIS} stroke="var(--border)" tickLine={false} axisLine={false} width={26} />
           <Tooltip
             cursor={{ fill: "var(--primary)", fillOpacity: 0.08 }}
-            content={<ChartTooltip format={(v) => v.toLocaleString()} />}
+            content={<ChartTooltip format={fmtInt} />}
           />
           <Bar dataKey="value" radius={[6, 6, 0, 0]} animationDuration={duration} animationEasing="ease-out">
             {data.map((_, i) => (
@@ -126,7 +127,7 @@ export function RegistrationsLineChart({ data, emptyLabel }: { data: Point[]; em
           <YAxis allowDecimals={false} tick={AXIS} stroke="var(--border)" tickLine={false} axisLine={false} width={26} />
           <Tooltip
             cursor={{ stroke: "var(--primary)", strokeOpacity: 0.35 }}
-            content={<ChartTooltip format={(v) => v.toLocaleString()} />}
+            content={<ChartTooltip format={fmtInt} />}
           />
           <Line
             type="monotone"
@@ -165,7 +166,7 @@ export function BreakdownDonut({
 
   if (!slices.length || total <= 0) return <ChartEmpty label={emptyLabel} />;
 
-  const fmt = format ?? ((v: number) => v.toLocaleString());
+  const fmt = format ?? fmtInt;
   const focused = active != null ? slices[active] : null;
   const legendItems = slices.map((s, i) => ({
     key: s.key,

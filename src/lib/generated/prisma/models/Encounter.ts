@@ -68,6 +68,11 @@ export type EncounterMinAggregateOutputType = {
   physicalExamination: string | null
   assessment: string | null
   plan: string | null
+  symptomsText: string | null
+  diagnosisText: string | null
+  labsText: string | null
+  imagingText: string | null
+  treatmentsText: string | null
   painLocation: string | null
   symptomNature: string | null
   aggravatingFactors: string | null
@@ -106,6 +111,11 @@ export type EncounterMaxAggregateOutputType = {
   physicalExamination: string | null
   assessment: string | null
   plan: string | null
+  symptomsText: string | null
+  diagnosisText: string | null
+  labsText: string | null
+  imagingText: string | null
+  treatmentsText: string | null
   painLocation: string | null
   symptomNature: string | null
   aggravatingFactors: string | null
@@ -145,6 +155,11 @@ export type EncounterCountAggregateOutputType = {
   physicalExamination: number
   assessment: number
   plan: number
+  symptomsText: number
+  diagnosisText: number
+  labsText: number
+  imagingText: number
+  treatmentsText: number
   painLocation: number
   symptomNature: number
   aggravatingFactors: number
@@ -212,6 +227,11 @@ export type EncounterMinAggregateInputType = {
   physicalExamination?: true
   assessment?: true
   plan?: true
+  symptomsText?: true
+  diagnosisText?: true
+  labsText?: true
+  imagingText?: true
+  treatmentsText?: true
   painLocation?: true
   symptomNature?: true
   aggravatingFactors?: true
@@ -250,6 +270,11 @@ export type EncounterMaxAggregateInputType = {
   physicalExamination?: true
   assessment?: true
   plan?: true
+  symptomsText?: true
+  diagnosisText?: true
+  labsText?: true
+  imagingText?: true
+  treatmentsText?: true
   painLocation?: true
   symptomNature?: true
   aggravatingFactors?: true
@@ -289,6 +314,11 @@ export type EncounterCountAggregateInputType = {
   physicalExamination?: true
   assessment?: true
   plan?: true
+  symptomsText?: true
+  diagnosisText?: true
+  labsText?: true
+  imagingText?: true
+  treatmentsText?: true
   painLocation?: true
   symptomNature?: true
   aggravatingFactors?: true
@@ -418,6 +448,11 @@ export type EncounterGroupByOutputType = {
   physicalExamination: string | null
   assessment: string | null
   plan: string | null
+  symptomsText: string | null
+  diagnosisText: string | null
+  labsText: string | null
+  imagingText: string | null
+  treatmentsText: string | null
   painLocation: string | null
   symptomNature: string | null
   aggravatingFactors: string | null
@@ -483,6 +518,11 @@ export type EncounterWhereInput = {
   physicalExamination?: Prisma.StringNullableFilter<"Encounter"> | string | null
   assessment?: Prisma.StringNullableFilter<"Encounter"> | string | null
   plan?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  symptomsText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  diagnosisText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  labsText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  imagingText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  treatmentsText?: Prisma.StringNullableFilter<"Encounter"> | string | null
   painLocation?: Prisma.StringNullableFilter<"Encounter"> | string | null
   symptomNature?: Prisma.StringNullableFilter<"Encounter"> | string | null
   aggravatingFactors?: Prisma.StringNullableFilter<"Encounter"> | string | null
@@ -536,6 +576,11 @@ export type EncounterOrderByWithRelationInput = {
   physicalExamination?: Prisma.SortOrderInput | Prisma.SortOrder
   assessment?: Prisma.SortOrderInput | Prisma.SortOrder
   plan?: Prisma.SortOrderInput | Prisma.SortOrder
+  symptomsText?: Prisma.SortOrderInput | Prisma.SortOrder
+  diagnosisText?: Prisma.SortOrderInput | Prisma.SortOrder
+  labsText?: Prisma.SortOrderInput | Prisma.SortOrder
+  imagingText?: Prisma.SortOrderInput | Prisma.SortOrder
+  treatmentsText?: Prisma.SortOrderInput | Prisma.SortOrder
   painLocation?: Prisma.SortOrderInput | Prisma.SortOrder
   symptomNature?: Prisma.SortOrderInput | Prisma.SortOrder
   aggravatingFactors?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -592,6 +637,11 @@ export type EncounterWhereUniqueInput = Prisma.AtLeast<{
   physicalExamination?: Prisma.StringNullableFilter<"Encounter"> | string | null
   assessment?: Prisma.StringNullableFilter<"Encounter"> | string | null
   plan?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  symptomsText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  diagnosisText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  labsText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  imagingText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  treatmentsText?: Prisma.StringNullableFilter<"Encounter"> | string | null
   painLocation?: Prisma.StringNullableFilter<"Encounter"> | string | null
   symptomNature?: Prisma.StringNullableFilter<"Encounter"> | string | null
   aggravatingFactors?: Prisma.StringNullableFilter<"Encounter"> | string | null
@@ -645,6 +695,11 @@ export type EncounterOrderByWithAggregationInput = {
   physicalExamination?: Prisma.SortOrderInput | Prisma.SortOrder
   assessment?: Prisma.SortOrderInput | Prisma.SortOrder
   plan?: Prisma.SortOrderInput | Prisma.SortOrder
+  symptomsText?: Prisma.SortOrderInput | Prisma.SortOrder
+  diagnosisText?: Prisma.SortOrderInput | Prisma.SortOrder
+  labsText?: Prisma.SortOrderInput | Prisma.SortOrder
+  imagingText?: Prisma.SortOrderInput | Prisma.SortOrder
+  treatmentsText?: Prisma.SortOrderInput | Prisma.SortOrder
   painLocation?: Prisma.SortOrderInput | Prisma.SortOrder
   symptomNature?: Prisma.SortOrderInput | Prisma.SortOrder
   aggravatingFactors?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -695,6 +750,11 @@ export type EncounterScalarWhereWithAggregatesInput = {
   physicalExamination?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
   assessment?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
   plan?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
+  symptomsText?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
+  diagnosisText?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
+  labsText?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
+  imagingText?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
+  treatmentsText?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
   painLocation?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
   symptomNature?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
   aggravatingFactors?: Prisma.StringNullableWithAggregatesFilter<"Encounter"> | string | null
@@ -733,6 +793,11 @@ export type EncounterCreateInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -786,6 +851,11 @@ export type EncounterUncheckedCreateInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -831,6 +901,11 @@ export type EncounterUpdateInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -884,6 +959,11 @@ export type EncounterUncheckedUpdateInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -933,6 +1013,11 @@ export type EncounterCreateManyInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -971,6 +1056,11 @@ export type EncounterUpdateManyMutationInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1013,6 +1103,11 @@ export type EncounterUncheckedUpdateManyInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1070,6 +1165,11 @@ export type EncounterCountOrderByAggregateInput = {
   physicalExamination?: Prisma.SortOrder
   assessment?: Prisma.SortOrder
   plan?: Prisma.SortOrder
+  symptomsText?: Prisma.SortOrder
+  diagnosisText?: Prisma.SortOrder
+  labsText?: Prisma.SortOrder
+  imagingText?: Prisma.SortOrder
+  treatmentsText?: Prisma.SortOrder
   painLocation?: Prisma.SortOrder
   symptomNature?: Prisma.SortOrder
   aggravatingFactors?: Prisma.SortOrder
@@ -1123,6 +1223,11 @@ export type EncounterMaxOrderByAggregateInput = {
   physicalExamination?: Prisma.SortOrder
   assessment?: Prisma.SortOrder
   plan?: Prisma.SortOrder
+  symptomsText?: Prisma.SortOrder
+  diagnosisText?: Prisma.SortOrder
+  labsText?: Prisma.SortOrder
+  imagingText?: Prisma.SortOrder
+  treatmentsText?: Prisma.SortOrder
   painLocation?: Prisma.SortOrder
   symptomNature?: Prisma.SortOrder
   aggravatingFactors?: Prisma.SortOrder
@@ -1161,6 +1266,11 @@ export type EncounterMinOrderByAggregateInput = {
   physicalExamination?: Prisma.SortOrder
   assessment?: Prisma.SortOrder
   plan?: Prisma.SortOrder
+  symptomsText?: Prisma.SortOrder
+  diagnosisText?: Prisma.SortOrder
+  labsText?: Prisma.SortOrder
+  imagingText?: Prisma.SortOrder
+  treatmentsText?: Prisma.SortOrder
   painLocation?: Prisma.SortOrder
   symptomNature?: Prisma.SortOrder
   aggravatingFactors?: Prisma.SortOrder
@@ -1494,6 +1604,11 @@ export type EncounterCreateWithoutDoctorInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -1545,6 +1660,11 @@ export type EncounterUncheckedCreateWithoutDoctorInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -1623,6 +1743,11 @@ export type EncounterScalarWhereInput = {
   physicalExamination?: Prisma.StringNullableFilter<"Encounter"> | string | null
   assessment?: Prisma.StringNullableFilter<"Encounter"> | string | null
   plan?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  symptomsText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  diagnosisText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  labsText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  imagingText?: Prisma.StringNullableFilter<"Encounter"> | string | null
+  treatmentsText?: Prisma.StringNullableFilter<"Encounter"> | string | null
   painLocation?: Prisma.StringNullableFilter<"Encounter"> | string | null
   symptomNature?: Prisma.StringNullableFilter<"Encounter"> | string | null
   aggravatingFactors?: Prisma.StringNullableFilter<"Encounter"> | string | null
@@ -1661,6 +1786,11 @@ export type EncounterCreateWithoutClinicInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -1712,6 +1842,11 @@ export type EncounterUncheckedCreateWithoutClinicInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -1783,6 +1918,11 @@ export type EncounterCreateWithoutPatientInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -1834,6 +1974,11 @@ export type EncounterUncheckedCreateWithoutPatientInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -1905,6 +2050,11 @@ export type EncounterCreateWithoutAppointmentInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -1956,6 +2106,11 @@ export type EncounterUncheckedCreateWithoutAppointmentInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2017,6 +2172,11 @@ export type EncounterUpdateWithoutAppointmentInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2068,6 +2228,11 @@ export type EncounterUncheckedUpdateWithoutAppointmentInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2113,6 +2278,11 @@ export type EncounterCreateWithoutVisitInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2165,6 +2335,11 @@ export type EncounterUncheckedCreateWithoutVisitInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2225,6 +2400,11 @@ export type EncounterUpdateWithoutVisitInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2277,6 +2457,11 @@ export type EncounterUncheckedUpdateWithoutVisitInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2321,6 +2506,11 @@ export type EncounterCreateWithoutDiagnosesInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2373,6 +2563,11 @@ export type EncounterUncheckedCreateWithoutDiagnosesInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2433,6 +2628,11 @@ export type EncounterUpdateWithoutDiagnosesInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2485,6 +2685,11 @@ export type EncounterUncheckedUpdateWithoutDiagnosesInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2529,6 +2734,11 @@ export type EncounterCreateWithoutOrdersInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2581,6 +2791,11 @@ export type EncounterUncheckedCreateWithoutOrdersInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2641,6 +2856,11 @@ export type EncounterUpdateWithoutOrdersInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2693,6 +2913,11 @@ export type EncounterUncheckedUpdateWithoutOrdersInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2737,6 +2962,11 @@ export type EncounterCreateWithoutDocumentsInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2789,6 +3019,11 @@ export type EncounterUncheckedCreateWithoutDocumentsInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2849,6 +3084,11 @@ export type EncounterUpdateWithoutDocumentsInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2901,6 +3141,11 @@ export type EncounterUncheckedUpdateWithoutDocumentsInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -2945,6 +3190,11 @@ export type EncounterCreateWithoutSignatureInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -2997,6 +3247,11 @@ export type EncounterUncheckedCreateWithoutSignatureInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -3057,6 +3312,11 @@ export type EncounterUpdateWithoutSignatureInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3109,6 +3369,11 @@ export type EncounterUncheckedUpdateWithoutSignatureInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3153,6 +3418,11 @@ export type EncounterCreateWithoutAmendmentsInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -3205,6 +3475,11 @@ export type EncounterUncheckedCreateWithoutAmendmentsInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -3265,6 +3540,11 @@ export type EncounterUpdateWithoutAmendmentsInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3317,6 +3597,11 @@ export type EncounterUncheckedUpdateWithoutAmendmentsInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3361,6 +3646,11 @@ export type EncounterCreateWithoutTemplateUsageInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -3413,6 +3703,11 @@ export type EncounterUncheckedCreateWithoutTemplateUsageInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -3473,6 +3768,11 @@ export type EncounterUpdateWithoutTemplateUsageInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3525,6 +3825,11 @@ export type EncounterUncheckedUpdateWithoutTemplateUsageInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3572,6 +3877,11 @@ export type EncounterCreateManyDoctorInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -3610,6 +3920,11 @@ export type EncounterUpdateWithoutDoctorInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3661,6 +3976,11 @@ export type EncounterUncheckedUpdateWithoutDoctorInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3709,6 +4029,11 @@ export type EncounterUncheckedUpdateManyWithoutDoctorInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3750,6 +4075,11 @@ export type EncounterCreateManyClinicInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -3788,6 +4118,11 @@ export type EncounterUpdateWithoutClinicInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3839,6 +4174,11 @@ export type EncounterUncheckedUpdateWithoutClinicInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3887,6 +4227,11 @@ export type EncounterUncheckedUpdateManyWithoutClinicInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -3928,6 +4273,11 @@ export type EncounterCreateManyPatientInput = {
   physicalExamination?: string | null
   assessment?: string | null
   plan?: string | null
+  symptomsText?: string | null
+  diagnosisText?: string | null
+  labsText?: string | null
+  imagingText?: string | null
+  treatmentsText?: string | null
   painLocation?: string | null
   symptomNature?: string | null
   aggravatingFactors?: string | null
@@ -3966,6 +4316,11 @@ export type EncounterUpdateWithoutPatientInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -4017,6 +4372,11 @@ export type EncounterUncheckedUpdateWithoutPatientInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -4065,6 +4425,11 @@ export type EncounterUncheckedUpdateManyWithoutPatientInput = {
   physicalExamination?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   assessment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   plan?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  symptomsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnosisText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  labsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imagingText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  treatmentsText?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   painLocation?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   symptomNature?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   aggravatingFactors?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -4165,6 +4530,11 @@ export type EncounterSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   physicalExamination?: boolean
   assessment?: boolean
   plan?: boolean
+  symptomsText?: boolean
+  diagnosisText?: boolean
+  labsText?: boolean
+  imagingText?: boolean
+  treatmentsText?: boolean
   painLocation?: boolean
   symptomNature?: boolean
   aggravatingFactors?: boolean
@@ -4219,6 +4589,11 @@ export type EncounterSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ext
   physicalExamination?: boolean
   assessment?: boolean
   plan?: boolean
+  symptomsText?: boolean
+  diagnosisText?: boolean
+  labsText?: boolean
+  imagingText?: boolean
+  treatmentsText?: boolean
   painLocation?: boolean
   symptomNature?: boolean
   aggravatingFactors?: boolean
@@ -4265,6 +4640,11 @@ export type EncounterSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ext
   physicalExamination?: boolean
   assessment?: boolean
   plan?: boolean
+  symptomsText?: boolean
+  diagnosisText?: boolean
+  labsText?: boolean
+  imagingText?: boolean
+  treatmentsText?: boolean
   painLocation?: boolean
   symptomNature?: boolean
   aggravatingFactors?: boolean
@@ -4311,6 +4691,11 @@ export type EncounterSelectScalar = {
   physicalExamination?: boolean
   assessment?: boolean
   plan?: boolean
+  symptomsText?: boolean
+  diagnosisText?: boolean
+  labsText?: boolean
+  imagingText?: boolean
+  treatmentsText?: boolean
   painLocation?: boolean
   symptomNature?: boolean
   aggravatingFactors?: boolean
@@ -4334,7 +4719,7 @@ export type EncounterSelectScalar = {
   updatedAt?: boolean
 }
 
-export type EncounterOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "clinicId" | "patientId" | "appointmentId" | "doctorId" | "type" | "status" | "chiefComplaint" | "symptomOnset" | "symptomDurationValue" | "symptomDurationUnit" | "severity" | "symptoms" | "subjective" | "objective" | "physicalExamination" | "assessment" | "plan" | "painLocation" | "symptomNature" | "aggravatingFactors" | "alleviatingFactors" | "history" | "examination" | "treatmentPlan" | "temperature" | "pulse" | "respRate" | "bpSystolic" | "bpDiastolic" | "spO2" | "height" | "weight" | "startedAt" | "completedAt" | "createdBy" | "updatedBy" | "createdAt" | "updatedAt", ExtArgs["result"]["encounter"]>
+export type EncounterOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "clinicId" | "patientId" | "appointmentId" | "doctorId" | "type" | "status" | "chiefComplaint" | "symptomOnset" | "symptomDurationValue" | "symptomDurationUnit" | "severity" | "symptoms" | "subjective" | "objective" | "physicalExamination" | "assessment" | "plan" | "symptomsText" | "diagnosisText" | "labsText" | "imagingText" | "treatmentsText" | "painLocation" | "symptomNature" | "aggravatingFactors" | "alleviatingFactors" | "history" | "examination" | "treatmentPlan" | "temperature" | "pulse" | "respRate" | "bpSystolic" | "bpDiastolic" | "spO2" | "height" | "weight" | "startedAt" | "completedAt" | "createdBy" | "updatedBy" | "createdAt" | "updatedAt", ExtArgs["result"]["encounter"]>
 export type EncounterInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   clinic?: boolean | Prisma.ClinicDefaultArgs<ExtArgs>
   patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
@@ -4396,6 +4781,11 @@ export type $EncounterPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     physicalExamination: string | null
     assessment: string | null
     plan: string | null
+    symptomsText: string | null
+    diagnosisText: string | null
+    labsText: string | null
+    imagingText: string | null
+    treatmentsText: string | null
     painLocation: string | null
     symptomNature: string | null
     aggravatingFactors: string | null
@@ -4869,6 +5259,11 @@ export interface EncounterFieldRefs {
   readonly physicalExamination: Prisma.FieldRef<"Encounter", 'String'>
   readonly assessment: Prisma.FieldRef<"Encounter", 'String'>
   readonly plan: Prisma.FieldRef<"Encounter", 'String'>
+  readonly symptomsText: Prisma.FieldRef<"Encounter", 'String'>
+  readonly diagnosisText: Prisma.FieldRef<"Encounter", 'String'>
+  readonly labsText: Prisma.FieldRef<"Encounter", 'String'>
+  readonly imagingText: Prisma.FieldRef<"Encounter", 'String'>
+  readonly treatmentsText: Prisma.FieldRef<"Encounter", 'String'>
   readonly painLocation: Prisma.FieldRef<"Encounter", 'String'>
   readonly symptomNature: Prisma.FieldRef<"Encounter", 'String'>
   readonly aggravatingFactors: Prisma.FieldRef<"Encounter", 'String'>

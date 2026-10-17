@@ -209,6 +209,7 @@ model Clinic {
   visits               Visit[]
   queues               Queue[]
   queueEntries         QueueEntry[]
+  tasks                Task[]
 }
 
 model Branch {
@@ -826,6 +827,11 @@ model Encounter {
   physicalExamination String?
   assessment         String?
   plan               String?
+  symptomsText       String?
+  diagnosisText      String?
+  labsText           String?
+  imagingText        String?
+  treatmentsText     String?
   painLocation       String?
   symptomNature      String?
   aggravatingFactors String?
@@ -2491,3 +2497,37 @@ model VitalAlert {
 
 // Enhance ClinicalTemplate with vitalThresholds
 // (structure field already exists, we'll document the expected JSON format in code)
+
+model Task {
+  id           String       @id @default(cuid())
+  clinicId     String
+  clinic       Clinic       @relation(fields: [clinicId], references: [id], onDelete: Cascade)
+  title        String
+  description  String?
+  status       TaskStatus   @default(TODO)
+  priority     TaskPriority @default(NORMAL)
+  dueDate      DateTime?
+  completedAt  DateTime?
+  createdById  String?
+  assignedToId String?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  @@index([clinicId, status, createdAt])
+  @@index([clinicId, dueDate])
+  @@index([createdById])
+  @@index([assignedToId])
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  DONE
+}
+
+enum TaskPriority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
+}

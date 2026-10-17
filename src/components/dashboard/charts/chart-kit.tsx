@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "motion/react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { fmtInt } from "@/lib/format";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -141,7 +142,7 @@ export function ChartLegend({
           <span className="size-2.5 shrink-0 rounded-[3px]" style={{ background: item.color }} />
           <span className="min-w-0 flex-1 truncate text-muted-foreground">{item.label}</span>
           <span className="shrink-0 font-medium tabular-nums" dir="ltr">
-            {item.value.toLocaleString()}
+            {fmtInt(item.value)}
           </span>
         </motion.li>
       ))}

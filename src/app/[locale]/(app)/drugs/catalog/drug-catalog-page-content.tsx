@@ -90,13 +90,12 @@ export function DrugCatalogPageContent({
   drugs,
   interactions,
   canManage,
-  t,
 }: {
   drugs: Drug[];
   interactions: Interaction[];
   canManage: boolean;
-  t: ReturnType<typeof useTranslations>;
 }) {
+  const t = useTranslations("drugs");
   const tc = useTranslations("common");
   const [search, setSearch] = useState("");
   const [activeTab, setActiveTab] = useState("catalog");
@@ -415,7 +414,7 @@ export function DrugCatalogPageContent({
                         <TableCell>{i.drug2.genericName} {i.drug2.strength} {i.drug2.dosageForm}</TableCell>
                         <TableCell>
                           <Badge variant={severityBadge[i.severity] ?? "secondary"}>
-                            {t(`interactionSeverity_${i.severity.toLowerCase()}`)}
+                            {t(`interactionSeverity_${i.severity}`)}
                           </Badge>
                         </TableCell>
                         <TableCell className="max-w-xs truncate">{i.management ?? "—"}</TableCell>
@@ -637,7 +636,7 @@ export function DrugCatalogPageContent({
                 <Select value={interactionForm.severity} onValueChange={(v) => setInteractionForm((f) => ({ ...f, severity: v }))} required>
                   <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
-                    {["MAJOR", "MODERATE", "MINOR"].map((s) => <SelectItem key={s} value={s}>{t(`interactionSeverity_${s.toLowerCase()}`)}</SelectItem>)}
+                    {["MAJOR", "MODERATE", "MINOR"].map((s) => <SelectItem key={s} value={s}>{t(`interactionSeverity_${s}`)}</SelectItem>)}
                   </SelectContent>
                 </Select>
               </div>

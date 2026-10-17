@@ -1,4 +1,4 @@
-import { GitMerge, Pencil, Stethoscope } from "lucide-react";
+import { GitMerge, Pencil, Printer, Stethoscope } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import type { Patient } from "@/lib/generated/prisma/client";
@@ -61,6 +61,12 @@ export async function PatientIdentity({
               <Link href={`/patients/${patient.id}/chart`}>
                 <Stethoscope />
                 {t("chart")}
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <Link href={`/patients/${patient.id}/form`} target="_blank" rel="noreferrer">
+                <Printer />
+                {t("printForm")}
               </Link>
             </Button>
             {canMerge && (

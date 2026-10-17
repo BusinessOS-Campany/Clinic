@@ -1,30 +1,27 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { useRouter } from "@/i18n/navigation";
 import {
-  Bell,
   ChevronsUpDown,
   LogOut,
   Menu,
-  Moon,
   PanelLeftClose,
   PanelLeftOpen,
+  PanelRightClose,
+  PanelRightOpen,
   Search,
   Settings,
-  Sun,
 } from "lucide-react";
 import { useAppPreferences } from "@/components/providers/app-preferences";
-import { useTheme } from "@/components/providers/theme-provider";
 import { signOut } from "@/core/auth/client";
 import type { SessionUser } from "@/core/auth/session";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Skeleton } from "@/components/ui/skeleton";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -42,7 +39,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { CommandMenu } from "./command-menu";
-import { findNavHref } from "./nav";
+import { LocaleSwitcher } from "./locale-switcher";
+import { ThemeSwitcher } from "./theme-switcher";
+import { NotificationBell } from "@/components/notifications/notification-bell";
+import { findNavKey } from "./nav";
 
 export function Header({
   user,
@@ -55,13 +55,14 @@ export function Header({
   const tu = useTranslations("user");
   const tc = useTranslations("common");
   const pathname = usePathname();
-  const { resolvedTheme, setTheme } = useTheme();
+  const locale = useLocale();
+  const rtl = locale === "ar";
   const { sidebarCollapsed, setSidebarCollapsed } = useAppPreferences();
   const [searchOpen, setSearchOpen] = useState(false);
   const router = useRouter();
   const [signingOut, setSigningOut] = useState(false);
 
-  const currentHref = findNavHref(pathname ?? "/");
+  const currentKey = findNavKey(pathname ?? "/");
 
   const initials = useMemo(() => {
     const parts = (user.name || "?").trim().split(/\s+/);
@@ -77,7 +78,7 @@ export function Header({
   }
 
   return (
-    <header className="sticky top-0 z-30 flex h-14 items-center gap-2 border-b bg-background/80 px-4 backdrop-blur">
+    <header className="sticky top-0 z-30 flex h-14 items-center gap-2 border-b bg-background/80 px-4 backdrop-blur print:hidden">
       <Button
         variant="ghost"
         size="icon"
@@ -96,7 +97,13 @@ export function Header({
         aria-label={sidebarCollapsed ? t("expandSidebar") : t("collapseSidebar")}
       >
         {sidebarCollapsed ? (
-          <PanelLeftOpen className="size-5" />
+          rtl ? (
+            <PanelRightOpen className="size-5" />
+          ) : (
+            <PanelLeftOpen className="size-5" />
+          )
+        ) : rtl ? (
+          <PanelRightClose className="size-5" />
         ) : (
           <PanelLeftClose className="size-5" />
         )}
@@ -107,11 +114,11 @@ export function Header({
           <BreadcrumbItem>
             <BreadcrumbLink href="/">{t("dashboard")}</BreadcrumbLink>
           </BreadcrumbItem>
-          {currentHref && currentHref !== "/" && (
+          {currentKey && currentKey !== "dashboard" && (
             <>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>{t(currentHref.slice(1))}</BreadcrumbPage>
+                <BreadcrumbPage>{t(currentKey)}</BreadcrumbPage>
               </BreadcrumbItem>
             </>
           )}
@@ -119,16 +126,16 @@ export function Header({
       </Breadcrumb>
 
       {/* Mobile breadcrumb - simplified */}
-      <Breadcrumb className="block sm:hidden flex-1">
+      <Breadcrumb className="block min-w-0 flex-1 sm:hidden">
         <BreadcrumbList className="overflow-x-auto flex gap-1 pb-1">
           <BreadcrumbItem>
             <BreadcrumbLink href="/" className="px-2 py-1 text-sm">{t("dashboard")}</BreadcrumbLink>
           </BreadcrumbItem>
-          {currentHref && currentHref !== "/" && (
+          {currentKey && currentKey !== "dashboard" && (
             <>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage className="px-2 py-1 text-sm truncate max-w-[150px]">{t(currentHref.slice(1))}</BreadcrumbPage>
+                <BreadcrumbPage className="px-2 py-1 text-sm truncate max-w-[150px]">{t(currentKey)}</BreadcrumbPage>
               </BreadcrumbItem>
             </>
           )}
@@ -139,45 +146,32 @@ export function Header({
 
       <Button
         variant="outline"
+        size="icon"
+        className="sm:hidden"
+        onClick={() => setSearchOpen(true)}
+        aria-label={t("globalSearch")}
+      >
+        <Search className="size-4" />
+      </Button>
+
+      <Button
+        variant="outline"
         size="sm"
-        className="gap-2 text-muted-foreground w-full sm:w-56 md:w-64 justify-start"
+        className="hidden gap-2 justify-start text-muted-foreground sm:inline-flex sm:w-52 md:w-64"
         onClick={() => setSearchOpen(true)}
       >
         <Search className="size-4" />
-        <span className="hidden sm:inline">{t("globalSearch")}</span>
-        <kbd className="ms-auto hidden rounded border bg-muted px-1.5 py-0.5 font-mono text-[10px] sm:inline">
+        <span>{t("globalSearch")}</span>
+        <kbd className="ms-auto rounded border bg-muted px-1.5 py-0.5 font-mono text-[10px]">
           Ctrl K
         </kbd>
       </Button>
 
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-        aria-label={tc("save")}
-      >
-        {resolvedTheme === "dark" ? (
-          <Sun className="size-5" />
-        ) : (
-          <Moon className="size-5" />
-        )}
-      </Button>
+      <ThemeSwitcher />
 
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" className="relative" aria-label={t("notifications")}>
-            <Bell className="size-5" />
-            <span className="absolute top-1.5 end-1.5 size-2 rounded-full bg-primary" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-full sm:w-80 md:w-96">
-          <DropdownMenuLabel className="text-center">{t("notifications")}</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <div className="flex h-24 items-center justify-center">
-            <p className="text-sm text-muted-foreground">{tc("empty")}</p>
-          </div>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <LocaleSwitcher />
+
+      <NotificationBell />
 
       <Separator orientation="vertical" className="mx-1 h-6 hidden sm:block" />
 

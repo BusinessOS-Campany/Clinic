@@ -10,15 +10,11 @@ import {
   type VisitOption,
 } from "@/app/[locale]/(app)/visits/actions";
 import {
-  DURATION_UNITS,
   REFERRAL_SOURCES,
   VISIT_PRIORITIES,
-  VISIT_ROUTES,
   VISIT_TYPES,
-  type DurationUnitValue,
   type ReferralSourceValue,
   type VisitPriorityValue,
-  type VisitRoute,
   type VisitTypeValue,
 } from "@/app/[locale]/(app)/visits/schema";
 import { Button } from "@/components/ui/button";
@@ -32,7 +28,6 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
@@ -42,30 +37,22 @@ import {
 } from "@/components/ui/select";
 
 type FormState = {
-  route: VisitRoute;
   type: VisitTypeValue;
   priority: VisitPriorityValue;
   referralSource: ReferralSourceValue;
   departmentId: string;
   doctorId: string;
   reason: string;
-  chiefComplaint: string;
-  symptomDurationValue: string;
-  symptomDurationUnit: DurationUnitValue;
   notes: string;
 };
 
 const INITIAL: FormState = {
-  route: "DOCTOR",
   type: "NEW",
   priority: "NORMAL",
   referralSource: "SELF",
   departmentId: "NONE",
   doctorId: "NONE",
   reason: "",
-  chiefComplaint: "",
-  symptomDurationValue: "",
-  symptomDurationUnit: "DAYS",
   notes: "",
 };
 
@@ -77,11 +64,13 @@ export function OpenVisitDialog({
   open,
   onOpenChange,
   trigger,
+  initialType,
 }: {
   patientId: string | null;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   trigger?: React.ReactNode;
+  initialType?: VisitTypeValue;
 }) {
   const t = useTranslations("visits");
   const tc = useTranslations("common");
@@ -98,7 +87,14 @@ export function OpenVisitDialog({
   }>({ doctors: [], departments: [] });
   const [loaded, setLoaded] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [form, setForm] = useState<FormState>({ ...INITIAL });
+  const [form, setForm] = useState<FormState>(() => ({
+    ...INITIAL,
+    type: initialType ?? INITIAL.type,
+  }));
+
+  useEffect(() => {
+    if (isOpen) setForm({ ...INITIAL, type: initialType ?? INITIAL.type });
+  }, [isOpen, initialType]);
 
   function setOpen(next: boolean) {
     if (!controlled) setInternalOpen(next);
@@ -122,7 +118,7 @@ export function OpenVisitDialog({
   }, [isOpen, loaded]);
 
   function handleOpenChange(next: boolean) {
-    if (next) setForm({ ...INITIAL });
+    if (next) setForm({ ...INITIAL, type: initialType ?? INITIAL.type });
     setOpen(next);
   }
 
@@ -131,11 +127,8 @@ export function OpenVisitDialog({
     if (!patientId) return;
     setSubmitting(true);
     try {
-      const durationValue = form.symptomDurationValue
-        ? Number(form.symptomDurationValue)
-        : undefined;
       const res = await openVisit(patientId, {
-        route: form.route,
+        route: "DOCTOR",
         type: form.type,
         priority: form.priority,
         referralSource: form.referralSource,
@@ -146,12 +139,6 @@ export function OpenVisitDialog({
         doctorId:
           form.doctorId && form.doctorId !== "NONE" ? form.doctorId : undefined,
         reason: form.reason || undefined,
-        chiefComplaint: form.chiefComplaint || undefined,
-        symptomDurationValue:
-          durationValue !== undefined && Number.isFinite(durationValue)
-            ? durationValue
-            : undefined,
-        symptomDurationUnit: durationValue !== undefined ? form.symptomDurationUnit : undefined,
         notes: form.notes || undefined,
       });
       if (res.ok) {
@@ -274,53 +261,6 @@ export function OpenVisitDialog({
               />
             </div>
 
-            <div className="flex flex-col gap-2 sm:col-span-2">
-              <Label htmlFor="ov-complaint">{t("chiefComplaint")}</Label>
-              <Textarea
-                id="ov-complaint"
-                rows={2}
-                value={form.chiefComplaint}
-                onChange={(e) =>
-                  setForm((f) => ({ ...f, chiefComplaint: e.target.value }))
-                }
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <Label>{t("symptomDuration")}</Label>
-              <div className="flex items-center gap-2">
-                <Input
-                  type="number"
-                  min={0}
-                  className="w-24"
-                  value={form.symptomDurationValue}
-                  onChange={(e) =>
-                    setForm((f) => ({ ...f, symptomDurationValue: e.target.value }))
-                  }
-                />
-                <Select
-                  value={form.symptomDurationUnit}
-                  onValueChange={(v) =>
-                    setForm((f) => ({
-                      ...f,
-                      symptomDurationUnit: v as DurationUnitValue,
-                    }))
-                  }
-                >
-                  <SelectTrigger className="flex-1">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {DURATION_UNITS.map((u) => (
-                      <SelectItem key={u} value={u}>
-                        {t(`durationUnit_${u}`)}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-
             <div className="flex flex-col gap-2">
               <Label>{t("referralSource")}</Label>
               <Select
@@ -339,27 +279,6 @@ export function OpenVisitDialog({
                   {REFERRAL_SOURCES.map((v) => (
                     <SelectItem key={v} value={v}>
                       {t(`referral_${v}`)}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <Label>{t("route")}</Label>
-              <Select
-                value={form.route}
-                onValueChange={(v) =>
-                  setForm((f) => ({ ...f, route: v as VisitRoute }))
-                }
-              >
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {VISIT_ROUTES.map((r) => (
-                    <SelectItem key={r} value={r}>
-                      {r === "TRIAGE" ? t("routeTriage") : t("routeDoctor")}
                     </SelectItem>
                   ))}
                 </SelectContent>
