@@ -1,0 +1,516 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ------------------------------------------------------------------ *
+ * ClinicOS Design Tokens
+ * Palette: midnight navy / elegant teal / soft ivory / cool gray
+ * ------------------------------------------------------------------ */
+
+:root {
+  --radius: 0.625rem;
+
+  --background: #f6f5f1;
+  --foreground: #0d1b28;
+
+  --card: #ffffff;
+  --card-foreground: #0d1b28;
+
+  --popover: #ffffff;
+  --popover-foreground: #0d1b28;
+
+  /* teal (default) */
+  --primary: #0e7c74;
+  --primary-foreground: #ffffff;
+
+  --secondary: #e8ecef;
+  --secondary-foreground: #173246;
+
+  --muted: #eff0ed;
+  --muted-foreground: #5d6b76;
+
+  --accent: #e3efec;
+  --accent-foreground: #0b5f57;
+
+  --destructive: #b42318;
+  --destructive-foreground: #ffffff;
+
+  --border: #dde2e4;
+  --input: #d4dbe0;
+  --ring: #0e7c74;
+
+  --chart-1: #0e7c74;
+  --chart-2: #3f6fb5;
+  --chart-3: #b7791f;
+  --chart-4: #7c5cbf;
+  --chart-5: #c25e88;
+
+  /* deep navy sidebar */
+  --sidebar: #0a1a26;
+  --sidebar-foreground: #d7e2e9;
+  --sidebar-primary: #19a396;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #15323f;
+  --sidebar-accent-foreground: #dff0ea;
+  --sidebar-border: #163042;
+  --sidebar-ring: #19a396;
+
+  --success: #1a7f4e;
+  --warning: #b7791f;
+  --info: #3f6fb5;
+}
+
+.dark {
+  --background: #0a131c;
+  --foreground: #e5ecf1;
+
+  --card: #0f1c27;
+  --card-foreground: #e5ecf1;
+
+  --popover: #0f1c27;
+  --popover-foreground: #e5ecf1;
+
+  --primary: #22b4a0;
+  --primary-foreground: #04241f;
+
+  --secondary: #1a2a38;
+  --secondary-foreground: #dbe6ec;
+
+  --muted: #16242f;
+  --muted-foreground: #92a3af;
+
+  --accent: #123029;
+  --accent-foreground: #79dfcf;
+
+  --destructive: #f04438;
+  --destructive-foreground: #ffffff;
+
+  --border: #21343f;
+  --input: #263a46;
+  --ring: #22b4a0;
+
+  --sidebar: #08131c;
+  --sidebar-foreground: #c7d4dc;
+  --sidebar-primary: #22b4a0;
+  --sidebar-primary-foreground: #04241f;
+  --sidebar-accent: #122633;
+  --sidebar-accent-foreground: #dff0ea;
+  --sidebar-border: #1a2c37;
+  --sidebar-ring: #22b4a0;
+
+  --success: #33b37a;
+  --warning: #d99a3d;
+  --info: #6d94d6;
+}
+
+/* Accent palette (data-accent on <html>) */
+html[data-accent="ocean"] {
+  --primary: #2563eb;
+  --ring: #2563eb;
+  --sidebar-primary: #5b8def;
+  --accent: #e7efff;
+  --accent-foreground: #1d4ed8;
+}
+.dark[data-accent="ocean"],
+html[data-accent="ocean"].dark {
+  --primary: #5b8def;
+  --primary-foreground: #0a1c46;
+  --ring: #5b8def;
+  --sidebar-primary: #5b8def;
+  --accent: #142a55;
+  --accent-foreground: #a5c4ff;
+}
+
+html[data-accent="sage"] {
+  --primary: #4d7c0f;
+  --ring: #4d7c0f;
+  --sidebar-primary: #6aa02a;
+  --accent: #eef6de;
+  --accent-foreground: #3f6212;
+}
+.dark[data-accent="sage"],
+html[data-accent="sage"].dark {
+  --primary: #84cc16;
+  --primary-foreground: #1a2e05;
+  --ring: #84cc16;
+  --sidebar-primary: #84cc16;
+  --accent: #243a0e;
+  --accent-foreground: #bef264;
+}
+
+html[data-accent="plum"] {
+  --primary: #7c3aed;
+  --ring: #7c3aed;
+  --sidebar-primary: #a78bfa;
+  --accent: #f1eafe;
+  --accent-foreground: #6d28d9;
+}
+.dark[data-accent="plum"],
+html[data-accent="plum"].dark {
+  --primary: #a78bfa;
+  --primary-foreground: #2e1065;
+  --ring: #a78bfa;
+  --sidebar-primary: #a78bfa;
+  --accent: #281a4d;
+  --accent-foreground: #c4b5fd;
+}
+
+html[data-accent="gold"] {
+  --primary: #b45309;
+  --ring: #b45309;
+  --sidebar-primary: #d97706;
+  --accent: #fdf2e2;
+  --accent-foreground: #92400e;
+}
+.dark[data-accent="gold"],
+html[data-accent="gold"].dark {
+  --primary: #f0a02c;
+  --primary-foreground: #3b2204;
+  --ring: #f0a02c;
+  --sidebar-primary: #f0a02c;
+  --accent: #3a2a10;
+  --accent-foreground: #fcd34d;
+}
+
+/* Density (data-density on <html>): scales the whole spacing scale */
+@theme inline {
+  --spacing: 0.25rem;
+}
+html[data-density="compact"] {
+  --spacing: 0.21875rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: var(--font-sans-family), ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: var(--font-arabic-family), var(--font-sans-family), ui-sans-serif,
+    system-ui, sans-serif;
+  --font-mono: var(--font-mono-family), ui-monospace, "SF Mono", monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  [dir="rtl"] body,
+  html[dir="rtl"] {
+    font-family: var(--font-arabic);
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Auth experience — ambient motion
+ * Every rule here is decorative and is neutralised by the
+ * prefers-reduced-motion block at the bottom of this file.
+ * ------------------------------------------------------------------ */
+
+@keyframes auth-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes auth-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(7%, -9%, 0) scale(1.14);
+  }
+  66% {
+    transform: translate3d(-8%, 6%, 0) scale(0.93);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes auth-drift-rev {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.06);
+  }
+  50% {
+    transform: translate3d(-10%, 8%, 0) scale(0.9);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.06);
+  }
+}
+
+@keyframes auth-grid-pan {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 64px 64px;
+  }
+}
+
+@keyframes auth-sheen {
+  0% {
+    transform: translateX(-130%);
+  }
+  55%,
+  100% {
+    transform: translateX(230%);
+  }
+}
+
+@keyframes auth-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes auth-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 45%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.auth-aurora {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.auth-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  will-change: transform;
+}
+
+.auth-orb-a {
+  animation: auth-drift 22s ease-in-out infinite;
+}
+.auth-orb-b {
+  animation: auth-drift-rev 28s ease-in-out infinite;
+}
+.auth-orb-c {
+  animation: auth-drift 34s ease-in-out infinite reverse;
+}
+
+.auth-grid-lines {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--primary) 14%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--primary) 14%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 64px 64px;
+  animation: auth-grid-pan 40s linear infinite;
+  -webkit-mask-image: radial-gradient(ellipse 75% 60% at 50% 40%, #000 35%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 60% at 50% 40%, #000 35%, transparent 100%);
+}
+
+.auth-reveal {
+  animation: auth-rise 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Slowly rotating conic glow behind the sign-in card */
+.auth-ring {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    color-mix(in srgb, var(--primary) 70%, transparent) 60deg,
+    transparent 130deg,
+    transparent 360deg
+  );
+  animation: auth-rotate 7s linear infinite;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  padding: 1.5px;
+}
+
+.auth-glass {
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+}
+
+/* Specular sweep across the submit button */
+.auth-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgb(255 255 255 / 0.32) 50%,
+    transparent 80%
+  );
+  transform: translateX(-130%);
+  animation: auth-sheen 3.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.auth-pulse-ring {
+  animation: auth-pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ------------------------------------------------------------------ *
+ * List & section motion — pure CSS so server components stay
+ * server-rendered (no client JS just to animate a list in).
+ * ------------------------------------------------------------------ */
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes section-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+}
+
+.row-enter {
+  animation: row-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.section-enter {
+  animation: section-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.status-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Respect OS reduced motion unless the user explicitly opts into animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Slim, theme-aware scrollbar for the sidebar navigation */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--sidebar-foreground) 22%, transparent)
+    transparent;
+}
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--sidebar-foreground) 22%, transparent);
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--sidebar-foreground) 35%, transparent);
+}
